@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-64669.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>极品vue3中setup的细节,以及定义多个响应式reactive</title>
+        <meta name="description" content="vue3 setup reactive作用: 定义多个数据的响应式 const proxy = reactive(obj): 接收一个普通对象然后返回该普通对象的响应式代理器对象 响应式转换是“深层的" />
+        <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN机场 订阅链接中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-64669.htm" />
+    <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
+    <meta property="og:title" content="极品vue3中setup的细节,以及定义多个响应式reactive" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/ce2d070edbc01c851a4d7e6ee773bb6e.webp" />
+        <meta property="og:release_date" content="2025-02-28T06:56:44" />
+    <meta property="og:updated_time" content="2025-02-28T06:56:44" />
+        <meta property="og:description" content="vue3 setup reactive作用: 定义多个数据的响应式 const proxy = reactive(obj): 接收一个普通对象然后返回该普通对象的响应式代理器对象 响应式转换是“深层的" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="极品vue3中setup的细节,以及定义多个响应式reactive">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/font-awesome.css">
+    <link rel="stylesheet" href="/assets/website/css/freesstap/templatemo-softy-pinko.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRKT8FD20L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRKT8FD20L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                                                    <span>VPN机场</span>
+                                                </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h2>极品vue3中setup的细节,以及定义多个响应式reactive</h2>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p><strong>vue3 setup reactive</strong><br /><em>作用: 定义多个数据的响应式<br /> const proxy = reactive(obj): 接收一个普通对象然后返回该普通对象的响应式代理器对象<br /> 响应式转换是“深层的”：会影响对象内部所有嵌套的属性<br /> 内部基于 ES6 的 Proxy 实现，通过代理对象操作源对象内部数据都是响应式的</em></p> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">"ts"</span><span class="token operator">&gt;</span><span class="token keyword">import</span><span class="token punctuation">{<!-- --></span> defineComponent<span class="token punctuation">,</span> reactive<span class="token punctuation">}</span><span class="token keyword">from</span><span class="token string">"vue"</span><span class="token punctuation">;</span><span class="token keyword">export</span><span class="token keyword">default</span><span class="token function">defineComponent</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>   name<span class="token punctuation">:</span><span class="token string">"App"</span><span class="token punctuation">,</span>   components<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">const</span> obj<span class="token operator">=</span><span class="token punctuation">{<!-- --></span>       name<span class="token punctuation">:</span><span class="token string">"张三"</span><span class="token punctuation">,</span>       age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">,</span>       wiff<span class="token punctuation">:</span><span class="token punctuation">{<!-- --></span>         name<span class="token punctuation">:</span><span class="token string">"小红"</span><span class="token punctuation">,</span>         age<span class="token punctuation">:</span><span class="token number">20</span><span class="token punctuation">,</span>         car<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"汽车"</span><span class="token punctuation">,</span><span class="token string">"房车"</span><span class="token punctuation">,</span><span class="token string">"游轮"</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment">// 作用: 定义多个数据的响应式</span><span class="token comment">// const proxy = reactive(obj): 接收一个普通对象然后返回该普通对象的响应式代理器对象</span><span class="token comment">// 响应式转换是“深层的”：会影响对象内部所有嵌套的属性</span><span class="token comment">// 内部基于 ES6 的 Proxy 实现，通过代理对象操作源对象内部数据都是响应式的</span><span class="token comment">// 把数据变成响应式对象</span><span class="token comment">// 返回一个proxy的代理对象,被代理的目标对象就是obj对象</span><span class="token comment">// sum代理对象          obj是目标对象</span><span class="token comment">// 代理对象是响应式的,删除或更新或添加,操作代理对象就ok,目标对象中的数据也会随着发生变化,界面渲染,也需要代理对象</span><span class="token keyword">const</span> sum<span class="token operator">=</span><span class="token function">reactive</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">let</span><span class="token function-variable function">dian</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>       sum<span class="token punctuation">.</span>name<span class="token operator">=</span><span class="token string">"小红"</span><span class="token punctuation">;</span>       sum<span class="token punctuation">.</span>age<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token keyword">return</span><span class="token punctuation">{<!-- --></span>       sum<span class="token punctuation">,</span>       dian<span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span></code></pre> <h2><a id="vue3vue2_48" rel="nofollow"></a>vue3响应式与vue2响应式的区别</h2> <p><strong>vue2的响应式</strong><br /> 核心:<br /> 对象: 通过defineProperty对对象的已有属性值的读取和修改进行劫持(监视/拦截)<br /> 数组: 通过重写数组更新数组一系列更新元素的方法来实现元素修改的劫持</p> <pre><code class="prism language-javascript">Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span><span class="token string">'count'</span><span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre> <p><strong>vue3的响应式主要通过proxy与调用reflect</strong><br /> 核心:<br /> 通过Proxy(代理): 拦截对data任意属性的任意(13种)操作, 包括属性值的读写, 属性的添加, 属性的删除等…<br /> 通过 Reflect(反射): 动态对被代理对象的相应属性进行特定的操作</p> <pre><code class="prism language-javascript"><span class="token comment">/*      proxyUser是代理对象, user是被代理对象     后面所有的操作都是通过代理对象来操作被代理对象内部属性     */</span><span class="token keyword">const</span> proxyUser<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">Proxy</span><span class="token punctuation">(</span>user<span class="token punctuation">,</span><span class="token punctuation">{<!-- --></span><span class="token keyword">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'劫持get()'</span><span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'劫持set()'</span><span class="token punctuation">,</span> prop<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// (2)</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token function">deleteProperty</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'劫持delete属性'</span><span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token function">deleteProperty</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <h2><a id="vue3setup_90" rel="nofollow"></a>vue3中setup的细节</h2> <p><strong>一.setup执行的时机</strong><br /> 在beforeCreate之前执行(一次), 此时组件对象还没有创建<br /> this是undefined, 不能通过this来访问data/computed/methods / props<br /> 其实所有的composition API相关回调函数中也都不可以<br /><strong>二.setup的返回值</strong><br /> 一般都返回一个对象: 为模板提供数据, 也就是模板中可以直接使用此对象中的所有属性/方法<br /> 返回对象中的属性会与data函数返回对象的属性合并成为组件对象的属性<br /> 返回对象中的方法会与methods中的方法合并成功组件对象的方法<br /> 如果有重名, setup优先<br /> 注意:<br /> 一般不要混合使用: methods中可以访问setup提供的属性和方法, 但在setup方法中不能访问data和methods<br /> setup不能是一个async函数: 因为返回值不再是return的对象, 而是promise, 模板看不到return对象中的属性数据</p> <p><strong>三.setup的参数</strong><br /> setup(props, context) / setup(props, {attrs, slots, emit})<br /> props: 包含props配置声明且传入了的所有属性的对象<br /> attrs: 包含没有在props配置中声明的属性的对象, 相当于 this.<span class="katex--inline"><span class="katex"><span class="katex-mathml"></p> <p>        a</p> <p>        t</p> <p>        t</p> <p>        r</p> <p>        s</p> <p>        s</p> <p>        l</p> <p>        o</p> <p>        t</p> <p>        s</p> <p>        :</p> <p>        包</p> <p>        含</p> <p>        所</p> <p>        有</p> <p>        传</p> <p>        入</p> <p>        的</p> <p>        插</p> <p>        槽</p> <p>        内</p> <p>        容</p> <p>        的</p> <p>        对</p> <p>        象</p> <p>        ,</p> <p>        相</p> <p>        当</p> <p>        于</p> <p>        t</p> <p>        h</p> <p>        i</p> <p>        s</p> <p>        .</p> <p>       attrs slots: 包含所有传入的插槽内容的对象, 相当于 this.</span><span class="katex-html"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right: 0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right: 0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord cjk_fallback">包</span><span class="mord cjk_fallback">含</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">传</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">插</span><span class="mord cjk_fallback">槽</span><span class="mord cjk_fallback">内</span><span class="mord cjk_fallback">容</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mord cjk_fallback">相</span><span class="mord cjk_fallback">当</span><span class="mord cjk_fallback">于</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span></span>slots<br /> emit: 用来分发自定义事件的函数, 相当于 this.$emit</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-64059.htm">和田宠物医院哪家好（和田市宠物市场）</a></p>
+                                        <p>下一个：<a href="/news/article-64670.htm">仓鼠脱毛露出红色的皮怎么治（仓鼠脱毛有红点）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-20-clash-v2ray-ss-ssr.htm" title="VPN机场 | 2月20日18.9M/S|免费VPN/Clash/V2ray/SSR/Shadowrocket免费节点链接地址">VPN机场 | 2月20日18.9M/S|免费VPN/Clash/V2ray/SSR/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-24-clash-v2ray-ss-ssr.htm" title="VPN机场 | 2月24日20.1M/S|免费VPN/Shadowrocket/SSR/Clash/V2ray免费节点链接地址">VPN机场 | 2月24日20.1M/S|免费VPN/Shadowrocket/SSR/Clash/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-58192.htm" title="深圳益沣成资产管理有限公司（深圳市益成实业有限公司）">深圳益沣成资产管理有限公司（深圳市益成实业有限公司）</a></li>
+                        <li class="py-2"><a href="/news/article-64670.htm" title="仓鼠脱毛露出红色的皮怎么治（仓鼠脱毛有红点）">仓鼠脱毛露出红色的皮怎么治（仓鼠脱毛有红点）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-clash-v2ray-ss-ssr.htm" title="免费机场 | 2月8日20.6M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址">免费机场 | 2月8日20.6M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-64057.htm" title="兽医资格证考取条件（兽医资格证考取条件要求）">兽医资格证考取条件（兽医资格证考取条件要求）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-22-free-high-speed-nodes.htm" title="VPN机场 | 2月22日20.2M/S|免费VPN/Shadowrocket/Clash/V2ray/SSR免费节点链接地址">VPN机场 | 2月22日20.2M/S|免费VPN/Shadowrocket/Clash/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-59337.htm" title="青储饲料粉碎打包一体机价格及图片（青储饲料粉碎打包一体机价格及图片大全）">青储饲料粉碎打包一体机价格及图片（青储饲料粉碎打包一体机价格及图片大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-18-free-node-subscribe-links.htm" title="VPN机场 | 2月18日21.9M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址">VPN机场 | 2月18日21.9M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-free-high-speed-nodes.htm" title="VPN机场 | 2月17日21.4M/S|免费VPN/Clash/SSR/V2ray/Shadowrocket免费节点链接地址">VPN机场 | 2月17日21.4M/S|免费VPN/Clash/SSR/V2ray/Shadowrocket免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">63</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+        <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <a href="/">VPN机场 订阅链接中文网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/freesstap/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/website/js/frontend/freesstap/popper.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="/assets/website/js/frontend/freesstap/scrollreveal.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/jquery.counterup.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="/assets/website/js/frontend/freesstap/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
