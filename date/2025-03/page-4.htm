@@ -2,23 +2,22 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://vpnjichang.github.io/news/article-70407.htm" />
+        <link rel="canonical" href="https://vpnjichang.github.io" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
-    <title>java中Date与LocalDate、LocalDate、LocalDateTime互相转化</title>
-        <meta name="description" content="一、Date转化为LocalDate、LocalDate、LocalDateTime 1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime     public st" />
+    <title>2025-03归档 - 第3页 - VPN机场 订阅链接中文网</title>
+        <meta name="keywords" content="2025-03归档VPN机场 订阅链接中文网" />
+        <meta name="description" content="2025-03归档，当前是第3页" />
         <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
 
     <meta name="author" content="VPN机场 订阅链接中文网">
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://vpnjichang.github.io/news/article-70407.htm" />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:url" content="https://vpnjichang.github.io" />
     <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
-    <meta property="og:title" content="java中Date与LocalDate、LocalDate、LocalDateTime互相转化" />
-    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/b93fa680dce696370463ce8eebd4687e.webp" />
-        <meta property="og:release_date" content="2025-03-09T09:46:37" />
-    <meta property="og:updated_time" content="2025-03-09T09:46:37" />
-        <meta property="og:description" content="一、Date转化为LocalDate、LocalDate、LocalDateTime 1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime     public st" />
+    <meta property="og:title" content="2025-03归档 - 第3页 - VPN机场 订阅链接中文网" />
+    <meta property="og:image" content="/assets/website/img/freesstap/favicon.ico" />
+        <meta property="og:description" content="2025-03归档，当前是第3页" />
         
     <meta name="applicable-device" content="pc,mobile" />
     <meta name="renderer" content="webkit" />
@@ -27,7 +26,7 @@
     <meta name="robots" content="max-image-preview:large" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="java中Date与LocalDate、LocalDate、LocalDateTime互相转化">
+    <meta name="apple-mobile-web-app-title" content="2025-03归档 - 第3页 - VPN机场 订阅链接中文网">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
@@ -53,7 +52,7 @@
      crossorigin="anonymous"></script>
 </head>
 
-<body data-page="detail">
+<body data-page="category">
         <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -99,9 +98,9 @@
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h2>java中Date与LocalDate、LocalDate、LocalDateTime互相转化</h2>
+                        <h2>2025-03 归档</h2>
                         <p>
-                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                            <a href="/">首页</a> / 2025-03 归档
                         </p>
                     </div>
                 </div>
@@ -115,13 +114,49 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
-                  				  				  				<div id="content_views" class="htmledit_views"> <h2>一、Date转化为LocalDate、LocalDate、LocalDateTime</h2> <p>1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         //返回当前系统默认的时区         ZoneId zoneId = ZoneId.systemDefault();          //atZone()方法返回在指定时区,从该Instant生成的ZonedDateTime         ZonedDateTime zonedDateTime = date.toInstant().atZone(zoneId);         LocalDate localDate = zonedDateTime.toLocalDate();         LocalTime localTime = zonedDateTime.toLocalTime();         LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();     }</code></pre> <p>2.第二种，同样使用ZoneId、Instant，但最后不同</p> <pre><code class="language-java">public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = localDateTime.toLocalDate();         LocalTime localTime = localDateTime.toLocalTime();     }</code></pre> <p>3.第三种拓展，java9中新增了LocalDate、LocalTime的ofInstan()方法，所以第二种也可以写成：</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = LocalDate.ofInstant(instant, zoneId);         LocalTime localTime = LocalTime.ofInstant(instant, zoneId);     }</code></pre> <h2>二、LocalDate、LocalDate、LocalDateTime转化Date</h2> <p>1. java.time.LocalDateTime → java.util.Date</p> <pre><code class="language-java">    public void LocalDateTimeToDate() {         LocalDateTime localDateTime = LocalDateTime.now();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zoneId).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>2. java.time.LocalDate → java.util.Date</p> <pre><code class="language-java">    public void LocalDateToDate() {         LocalDate localDate = LocalDate.now();         ZoneId zone = ZoneId.systemDefault();         //将此日期与午夜时间组合在一起，以便在此日期开始时创建LocalDateTime，即生成2017-02-03T00:00         Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>3. java.time.LocalTime →&nbsp;java.util.Date</p> <pre><code class="language-java">    public void LocalTimeToDate() {         LocalTime localTime = LocalTime.now();         LocalDate localDate = LocalDate.now();         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);         ZoneId zone = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <h2>三、LocalDate、LocalDate、LocalDateTime中还有很多对日期，时间的操作方法，可以精细到毫秒，在此就不一一介绍了，具体可参考以下文章：</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/qingyunfc/p/10236734.html"  title="https://www.cnblogs.com/qingyunfc/p/10236734.html" rel="nofollow">https://www.cnblogs.com/qingyunfc/p/10236734.html</a></p> </div> 			                <div class="clearfix"></div>
-                <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-69741.htm">宠物粮食品牌前十名排名表格图（宠物粮品牌名称）</a></p>
-                                        <p>下一个：<a href="/news/article-70408.htm">Azure DevOps通过Azure Devops部署一个.NET Core WebAPI</a></p>
-                                    </div>
-                                </div>
+                    <div class="xcblog-blog-list">
+                                                <div class="row item xcblog-blog-item" data-date="2025-03-01">
+                            <div class="col-md-3">
+                                <a href="/news/article-65291.htm" class="xcblog-blog-url">
+                                    <img src="/uploads/20241110/66bebba8925f6771076383720219cbaa.webp" alt="办理动物医院需要什么手续和证件呢图片（办理动物医院需要什么手续和证件呢图片高清）" class="rounded img-fluid d-block mx-auto">
+                                </a>
+                            </div>
+                            <div class="col-md-9">
+                                <a href="/news/article-65291.htm" class="xcblog-blog-url">
+                                    <h3 class="section-title xcblog-blog-title">办理动物医院需要什么手续和证件呢图片（办理动物医院需要什么手续和证件呢图片高清）</h3>
+                                </a>
+                                <p>摘要：       本篇文章给大家谈谈办理动物医院需要什么手续和证件呢图片，以及办理动物医院需要什么手续和证件呢图片高清对应的知识点，希望对各位有所帮助，不要忘了收藏本站喔。本文目录一览：1、请问..</p>
+                            </div>
+                        </div>
+                                                <div class="row item xcblog-blog-item" data-date="2025-03-01">
+                            <div class="col-md-3">
+                                <a href="/news/article-65289.htm" class="xcblog-blog-url">
+                                    <img src="/uploads/20241110/7d0e5aceb2a25081e12f590d29595a5d.webp" alt="宠物粮食批发价格 宠物粮食批发价格表" class="rounded img-fluid d-block mx-auto">
+                                </a>
+                            </div>
+                            <div class="col-md-9">
+                                <a href="/news/article-65289.htm" class="xcblog-blog-url">
+                                    <h3 class="section-title xcblog-blog-title">宠物粮食批发价格 宠物粮食批发价格表</h3>
+                                </a>
+                                <p>摘要：       大家好，今天小编关注到一个比较有意思的话题，就是关于宠物粮食批发价格的问题，于是小编就整理了4个相关介绍宠物粮食批发价格的解答，让我们一起看看吧。全民江湖宠物粮食哪里买？宠物用品和</p>
+                            </div>
+                        </div>
+                                                <div class="row item xcblog-blog-item" data-date="2025-03-01">
+                            <div class="col-md-3">
+                                <a href="/free-nodes/2025-3-1-clash-v2ray-ss-ssr.htm" class="xcblog-blog-url">
+                                    <img src="/uploads/20241110/ce2d070edbc01c851a4d7e6ee773bb6e.webp" alt="VPN机场 | 3月1日22M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址" class="rounded img-fluid d-block mx-auto">
+                                </a>
+                            </div>
+                            <div class="col-md-9">
+                                <a href="/free-nodes/2025-3-1-clash-v2ray-ss-ssr.htm" class="xcblog-blog-url">
+                                    <h3 class="section-title xcblog-blog-title">VPN机场 | 3月1日22M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</h3>
+                                </a>
+                                <p>这一次的节点更新覆盖了新加坡、美国、香港、加拿大、韩国、欧洲、日本等地区,最高速度可达22 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
+                            </div>
+                        </div>
+                        
+                        <ul class="pagination"><li><a href="/date/2025-03/page-3.htm">&laquo;</a></li> <li><a href="/date/2025-03/">1</a></li><li><a href="/date/2025-03/page-2.htm">2</a></li><li><a href="/date/2025-03/page-3.htm">3</a></li><li class="active"><span>4</span></li> <li class="disabled"><span>&raquo;</span></li></ul>                    </div>
+                </div>
                 <div class="col-md-3">
                     <div class="panel panel-default">
     <div class="panel-heading">
@@ -129,16 +164,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-64059.htm" title="和田宠物医院哪家好（和田市宠物市场）">和田宠物医院哪家好（和田市宠物市场）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-5-node-share-links.htm" title="VPN机场 | 3月5日18.3M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN机场 | 3月5日18.3M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-54841.htm" title="义乌领养宠物的地方 义乌领养宠物的地方在哪里">义乌领养宠物的地方 义乌领养宠物的地方在哪里</a></li>
-                        <li class="py-2"><a href="/news/article-59337.htm" title="青储饲料粉碎打包一体机价格及图片（青储饲料粉碎打包一体机价格及图片大全）">青储饲料粉碎打包一体机价格及图片（青储饲料粉碎打包一体机价格及图片大全）</a></li>
-                        <li class="py-2"><a href="/news/article-69085.htm" title="Vue组件之间传值/调用方法的几种方式">Vue组件之间传值/调用方法的几种方式</a></li>
-                        <li class="py-2"><a href="/news/article-53373.htm" title="React + TypeScript实战（一）设定事件处理函数的参数类型">React + TypeScript实战（一）设定事件处理函数的参数类型</a></li>
-                        <li class="py-2"><a href="/news/article-59336.htm" title="猫咪疫苗三针要隔多少天（猫咪疫苗三针要隔多少天才能打）">猫咪疫苗三针要隔多少天（猫咪疫苗三针要隔多少天才能打）</a></li>
-                        <li class="py-2"><a href="/news/article-68431.htm" title="redis之发布与订阅(publish/subscribe模式)">redis之发布与订阅(publish/subscribe模式)</a></li>
-                        <li class="py-2"><a href="/news/article-54840.htm" title="动物疫苗产业链有哪些公司（国内动物疫苗龙头企业）">动物疫苗产业链有哪些公司（国内动物疫苗龙头企业）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-25-clash-v2ray-ss-ssr.htm" title="VPN机场 | 2月25日19.7M/S|免费VPN/V2ray/Clash/Shadowrocket/SSR免费节点链接地址">VPN机场 | 2月25日19.7M/S|免费VPN/V2ray/Clash/Shadowrocket/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-node-share.htm" title="VPN机场 | 3月4日21.8M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址">VPN机场 | 3月4日21.8M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-59908.htm" title="什么是动物疫苗,有哪些种类? 什么是动物疫苗,有哪些种类的">什么是动物疫苗,有哪些种类? 什么是动物疫苗,有哪些种类的</a></li>
+                        <li class="py-2"><a href="/news/article-71044.htm" title="成都领养宠物中心在哪儿啊（成都领养宠物中心在哪儿啊电话）">成都领养宠物中心在哪儿啊（成都领养宠物中心在哪儿啊电话）</a></li>
+                        <li class="py-2"><a href="/news/article-55946.htm" title="猫知道自己换主人了吗（猫跟人睡在一起吸阳气）">猫知道自己换主人了吗（猫跟人睡在一起吸阳气）</a></li>
+                        <li class="py-2"><a href="/news/article-62258.htm" title="开宠物店亏死了多少人啊视频（开宠物店的坑）">开宠物店亏死了多少人啊视频（开宠物店的坑）</a></li>
+                        <li class="py-2"><a href="/news/article-61652.htm" title="微信宠物店（微信宠物店签名）">微信宠物店（微信宠物店签名）</a></li>
+                        <li class="py-2"><a href="/news/article-54291.htm" title="中国宠物用品市场规模（国内宠物用品市场）">中国宠物用品市场规模（国内宠物用品市场）</a></li>
+                        <li class="py-2"><a href="/news/article-57056.htm" title="设计模式之六大原则——接口隔离原则（ISP）">设计模式之六大原则——接口隔离原则（ISP）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-node-share-links.htm" title="VPN机场 | 2月21日21.3M/S|免费VPN/SSR/Shadowrocket/Clash/V2ray免费节点链接地址">VPN机场 | 2月21日21.3M/S|免费VPN/SSR/Shadowrocket/Clash/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-1-clash-v2ray-ss-ssr.htm" title="VPN机场 | 3月1日22M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN机场 | 3月1日22M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
                     </ul>
     </div>
 </div>

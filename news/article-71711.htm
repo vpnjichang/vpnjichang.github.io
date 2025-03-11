@@ -2,23 +2,23 @@
 <html xml:lang="zh-CN" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://vpnjichang.github.io/news/article-70407.htm" />
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-71711.htm" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
-    <title>java中Date与LocalDate、LocalDate、LocalDateTime互相转化</title>
-        <meta name="description" content="一、Date转化为LocalDate、LocalDate、LocalDateTime 1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime     public st" />
+    <title>C++ functional库中的仿函数</title>
+        <meta name="description" content="一、仿函数简介 仿函数（functor）又称之为函数对象（function object），实际上就是 重载了()操作符 的 struct或class。 由于重载了（）操作符，所以使用他的时候就像在调" />
         <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
 
     <meta name="author" content="VPN机场 订阅链接中文网">
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://vpnjichang.github.io/news/article-70407.htm" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-71711.htm" />
     <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
-    <meta property="og:title" content="java中Date与LocalDate、LocalDate、LocalDateTime互相转化" />
-    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/b93fa680dce696370463ce8eebd4687e.webp" />
-        <meta property="og:release_date" content="2025-03-09T09:46:37" />
-    <meta property="og:updated_time" content="2025-03-09T09:46:37" />
-        <meta property="og:description" content="一、Date转化为LocalDate、LocalDate、LocalDateTime 1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime     public st" />
+    <meta property="og:title" content="C++ functional库中的仿函数" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/a6eead5fc2c28e6df818a671ccd76c91.webp" />
+        <meta property="og:release_date" content="2025-03-11T07:48:00" />
+    <meta property="og:updated_time" content="2025-03-11T07:48:00" />
+        <meta property="og:description" content="一、仿函数简介 仿函数（functor）又称之为函数对象（function object），实际上就是 重载了()操作符 的 struct或class。 由于重载了（）操作符，所以使用他的时候就像在调" />
         
     <meta name="applicable-device" content="pc,mobile" />
     <meta name="renderer" content="webkit" />
@@ -27,7 +27,7 @@
     <meta name="robots" content="max-image-preview:large" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="java中Date与LocalDate、LocalDate、LocalDateTime互相转化">
+    <meta name="apple-mobile-web-app-title" content="C++ functional库中的仿函数">
     <meta name="format-detection" content="telephone=no">
 
     <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
@@ -99,7 +99,7 @@
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h2>java中Date与LocalDate、LocalDate、LocalDateTime互相转化</h2>
+                        <h2>C++ functional库中的仿函数</h2>
                         <p>
                             <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
                         </p>
@@ -116,10 +116,10 @@
             <div class="row">
                 <div class="col-md-9">
                                     <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
-                  				  				  				<div id="content_views" class="htmledit_views"> <h2>一、Date转化为LocalDate、LocalDate、LocalDateTime</h2> <p>1.第一种转换方法，借助新增类ZoneId、Instant、ZonedDateTime</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         //返回当前系统默认的时区         ZoneId zoneId = ZoneId.systemDefault();          //atZone()方法返回在指定时区,从该Instant生成的ZonedDateTime         ZonedDateTime zonedDateTime = date.toInstant().atZone(zoneId);         LocalDate localDate = zonedDateTime.toLocalDate();         LocalTime localTime = zonedDateTime.toLocalTime();         LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();     }</code></pre> <p>2.第二种，同样使用ZoneId、Instant，但最后不同</p> <pre><code class="language-java">public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = localDateTime.toLocalDate();         LocalTime localTime = localDateTime.toLocalTime();     }</code></pre> <p>3.第三种拓展，java9中新增了LocalDate、LocalTime的ofInstan()方法，所以第二种也可以写成：</p> <pre><code class="language-java">    public static void date2Local() {         Date date = new Date();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = date.toInstant();          LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, zoneId);         LocalDate localDate = LocalDate.ofInstant(instant, zoneId);         LocalTime localTime = LocalTime.ofInstant(instant, zoneId);     }</code></pre> <h2>二、LocalDate、LocalDate、LocalDateTime转化Date</h2> <p>1. java.time.LocalDateTime → java.util.Date</p> <pre><code class="language-java">    public void LocalDateTimeToDate() {         LocalDateTime localDateTime = LocalDateTime.now();         ZoneId zoneId = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zoneId).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>2. java.time.LocalDate → java.util.Date</p> <pre><code class="language-java">    public void LocalDateToDate() {         LocalDate localDate = LocalDate.now();         ZoneId zone = ZoneId.systemDefault();         //将此日期与午夜时间组合在一起，以便在此日期开始时创建LocalDateTime，即生成2017-02-03T00:00         Instant instant = localDate.atStartOfDay().atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <p>3. java.time.LocalTime →&nbsp;java.util.Date</p> <pre><code class="language-java">    public void LocalTimeToDate() {         LocalTime localTime = LocalTime.now();         LocalDate localDate = LocalDate.now();         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);         ZoneId zone = ZoneId.systemDefault();         Instant instant = localDateTime.atZone(zone).toInstant();         Date date = Date.from(instant);     }</code></pre> <h2>三、LocalDate、LocalDate、LocalDateTime中还有很多对日期，时间的操作方法，可以精细到毫秒，在此就不一一介绍了，具体可参考以下文章：</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/qingyunfc/p/10236734.html"  title="https://www.cnblogs.com/qingyunfc/p/10236734.html" rel="nofollow">https://www.cnblogs.com/qingyunfc/p/10236734.html</a></p> </div> 			                <div class="clearfix"></div>
+                  				  				  				<h2 id="一仿函数简介">一、仿函数简介</h2> <p>仿函数（functor）又称之为函数对象（function object），实际上就是 重载了()操作符 的 struct或class。<br /> 由于重载了（）操作符，所以使用他的时候就像在调用函数一样，于是就被称为“仿”函数啦。</p> <h2 id="二仿函数简要写法示例">二、仿函数简要写法示例</h2> <p>一个很正常的需求，定义一个仿函数作为一个数组的排序规则：<br /><strong>将数组从大到小排序</strong></p> <pre><code class="language-C++">class Cmp { public:     bool operator()(const int &amp;a, const int &amp;b) {         return a &gt; b;     } };</code></pre> <p><strong>使用</strong>：</p> <pre><code class="language-C++">vector&lt;int&gt; a(10); iota(begin(a), end(a), 1);  sort(begin(a), end(a), Cmp());  // 使用()  for (auto x : a) {   cout &lt;&lt; x &lt;&lt; " "; }</code></pre> <p><strong>输出</strong>：<br /><code>10 9 8 7 6 5 4 3 2 1</code></p> <h2 id="三使用c自带的仿函数">三、使用C++自带的仿函数</h2> <p>在C++ 的functional头文件中，已经为我们提供好了一些仿函数，可以直接使用。</p> <h3 id="1算术仿函数">(1)算术仿函数</h3> <p>1.plus 计算两数之和<br /> 例：将两个等长数组相加</p> <pre><code class="language-C++">    vector&lt;int&gt; a(10), b(a);     iota(begin(a), end(a), 1);     iota(begin(b), end(b), 1);      transform(begin(a), end(a), begin(b), begin(a), plus&lt;int&gt;());      for (auto x : a) {         cout &lt;&lt; x &lt;&lt; " ";     }</code></pre> <p><strong>输出</strong>：<br /><code>2 4 6 8 10 12 14 16 18 20</code><br /> 2.minus 两数相减<br /> 将上面那个例子改一改：</p> <pre><code class="language-C++">transform(begin(a), end(a), begin(b), begin(a), minus&lt;int&gt;());</code></pre> <p><strong>输出</strong>：<br /><code>0 0 0 0 0 0 0 0 0 0</code></p> <p>3.multiplies 两数相乘<br /> 再将上面那个例子改一改：</p> <pre><code class="language-C++">transform(begin(a), end(a), begin(b), begin(a), multiplies&lt;int&gt;());</code></pre> <p><strong>输出</strong>：<br /><code>1 4 9 16 25 36 49 64 81 100</code></p> <p>4.divides 两数相除<br /> 还将上面那个例子改一改：</p> <pre><code class="language-C++">transform(begin(a), end(a), begin(b), begin(a), divides&lt;int&gt;());</code></pre> <p><strong>输出</strong>：<br /><code>1 1 1 1 1 1 1 1 1 1</code></p> <p>5.modules  取模运算<br /> 继续将上面那个例子改一改：</p> <pre><code class="language-C++">transform(begin(a), end(a), begin(b), begin(a), modulus&lt;int&gt;());</code></pre> <p><strong>输出</strong>：<br /><code>0 0 0 0 0 0 0 0 0 0</code></p> <p>6.negate 相反数<br /> 这次不能那样改了，因为上述的五个仿函数是二元仿函数，是对两个操作数而言的。<br /> negate是一元仿函数，只能对一个参数求相反数。<br /> 所以我们对a数组求相反数：</p> <pre><code class="language-C++">transform(begin(a), end(a), begin(a), negate&lt;int&gt;());</code></pre> <p><strong>输出</strong>：<br /><code>-1 -2 -3 -4 -5 -6 -7 -8 -9 -10</code></p> <h3 id="2关系仿函数">(2)关系仿函数</h3> <p>1.equal_to 是否相等<br /> 2.not_equal_to  是否不相等<br /> 3.greater  大于<br /> 4.less     小于<br /> 5.greater_equal  大于等于<br /> 6.less_equal     小于等于<br /> 到这时，我们就可以看出，可以使用 greater<int>() 来代替我们开头实现的例子<br /><strong>将数组从大到小排序</strong>:</int></p> <pre><code class="language-C++">vector&lt;int&gt; a(10); iota(begin(a), end(a), 1);  sort(begin(a), end(a), greater&lt;int&gt;());  // 使用()  for (auto x : a) {   cout &lt;&lt; x &lt;&lt; " "; }</code></pre> <p><strong>输出</strong>：<br /><code>10 9 8 7 6 5 4 3 2 1</code></p> <h3 id="3逻辑仿函数">(3)逻辑仿函数</h3> <p>1.logical_and   二元，求&amp;<br /> 2.logical_or    二元，求|<br /> 3.logical_not   一元，求！</p> <p>使用方法同上.<br /> 话说，并没有发现求异或的仿函数..</p> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
-                                        <p>上一个：<a href="/news/article-69741.htm">宠物粮食品牌前十名排名表格图（宠物粮品牌名称）</a></p>
-                                        <p>下一个：<a href="/news/article-70408.htm">Azure DevOps通过Azure Devops部署一个.NET Core WebAPI</a></p>
+                                        <p>上一个：<a href="/news/article-71044.htm">成都领养宠物中心在哪儿啊（成都领养宠物中心在哪儿啊电话）</a></p>
+                                        <p>下一个：<a href="/news/article-71712.htm">关于动物医院的纪录片（动物医生纪录片）</a></p>
                                     </div>
                                 </div>
                 <div class="col-md-3">
@@ -129,16 +129,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-59907.htm" title="动物疫苗经营交什么税种（动物疫苗经营许可）">动物疫苗经营交什么税种（动物疫苗经营许可）</a></li>
                         <li class="py-2"><a href="/news/article-64059.htm" title="和田宠物医院哪家好（和田市宠物市场）">和田宠物医院哪家好（和田市宠物市场）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-3-5-node-share-links.htm" title="VPN机场 | 3月5日18.3M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN机场 | 3月5日18.3M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-54841.htm" title="义乌领养宠物的地方 义乌领养宠物的地方在哪里">义乌领养宠物的地方 义乌领养宠物的地方在哪里</a></li>
-                        <li class="py-2"><a href="/news/article-59337.htm" title="青储饲料粉碎打包一体机价格及图片（青储饲料粉碎打包一体机价格及图片大全）">青储饲料粉碎打包一体机价格及图片（青储饲料粉碎打包一体机价格及图片大全）</a></li>
-                        <li class="py-2"><a href="/news/article-69085.htm" title="Vue组件之间传值/调用方法的几种方式">Vue组件之间传值/调用方法的几种方式</a></li>
-                        <li class="py-2"><a href="/news/article-53373.htm" title="React + TypeScript实战（一）设定事件处理函数的参数类型">React + TypeScript实战（一）设定事件处理函数的参数类型</a></li>
-                        <li class="py-2"><a href="/news/article-59336.htm" title="猫咪疫苗三针要隔多少天（猫咪疫苗三针要隔多少天才能打）">猫咪疫苗三针要隔多少天（猫咪疫苗三针要隔多少天才能打）</a></li>
-                        <li class="py-2"><a href="/news/article-68431.htm" title="redis之发布与订阅(publish/subscribe模式)">redis之发布与订阅(publish/subscribe模式)</a></li>
+                        <li class="py-2"><a href="/news/article-57620.htm" title="成都宠物疫苗批发 成都宠物疫苗批发市场">成都宠物疫苗批发 成都宠物疫苗批发市场</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-17-free-high-speed-nodes.htm" title="VPN机场 | 2月17日21.4M/S|免费VPN/Clash/SSR/V2ray/Shadowrocket免费节点链接地址">VPN机场 | 2月17日21.4M/S|免费VPN/Clash/SSR/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-subscribe-node.htm" title="VPN机场 | 2月19日19M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址">VPN机场 | 2月19日19M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-21-node-share-links.htm" title="VPN机场 | 2月21日21.3M/S|免费VPN/SSR/Shadowrocket/Clash/V2ray免费节点链接地址">VPN机场 | 2月21日21.3M/S|免费VPN/SSR/Shadowrocket/Clash/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-22-free-high-speed-nodes.htm" title="VPN机场 | 2月22日20.2M/S|免费VPN/Shadowrocket/Clash/V2ray/SSR免费节点链接地址">VPN机场 | 2月22日20.2M/S|免费VPN/Shadowrocket/Clash/V2ray/SSR免费节点链接地址</a></li>
                         <li class="py-2"><a href="/news/article-54840.htm" title="动物疫苗产业链有哪些公司（国内动物疫苗龙头企业）">动物疫苗产业链有哪些公司（国内动物疫苗龙头企业）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-2-25-clash-v2ray-ss-ssr.htm" title="VPN机场 | 2月25日19.7M/S|免费VPN/V2ray/Clash/Shadowrocket/SSR免费节点链接地址">VPN机场 | 2月25日19.7M/S|免费VPN/V2ray/Clash/Shadowrocket/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-node-share-links.htm" title="VPN机场 | 3月9日20.8M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址">VPN机场 | 3月9日20.8M/S|免费VPN/V2ray/Clash/SSR/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-55391.htm" title="动物疫苗制作流程视频（动物疫苗制作流程视频教程）">动物疫苗制作流程视频（动物疫苗制作流程视频教程）</a></li>
                     </ul>
     </div>
 </div>
