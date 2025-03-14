@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-73702.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>IDEA部署Tomcat(超详细)</title>
+        <meta name="description" content="创建Web项目 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们首先使用IDEA创建一个普通的java项目  &nbsp;&nbsp;&nbsp;&" />
+        <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN机场 订阅链接中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-73702.htm" />
+    <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
+    <meta property="og:title" content="IDEA部署Tomcat(超详细)" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/3b11e3314555600c1c79f8624d4ef06e.webp" />
+        <meta property="og:release_date" content="2025-03-14T07:06:29" />
+    <meta property="og:updated_time" content="2025-03-14T07:06:29" />
+        <meta property="og:description" content="创建Web项目 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们首先使用IDEA创建一个普通的java项目  &nbsp;&nbsp;&nbsp;&" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="IDEA部署Tomcat(超详细)">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/font-awesome.css">
+    <link rel="stylesheet" href="/assets/website/css/freesstap/templatemo-softy-pinko.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRKT8FD20L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRKT8FD20L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                                                    <span>VPN机场</span>
+                                                </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h2>IDEA部署Tomcat(超详细)</h2>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h2>创建Web项目</h2> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们首先使用IDEA创建一个普通的java项目</p> <p><img fetchpriority="high" decoding="async" alt="" height="254" src="http://img.555519.xyz/uploads3/20220607/1ca65d6c8d18abee7a3539b1a8dad22b.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创建好后的项目结构如上图，我创建的项目名称为tomcat，这个项目现在还是一个普通的java项目，想要开发web程序，我们还要做一下操作，首先我们先给项目添加依赖</p> <p><img decoding="async" alt="" height="265" src="http://img.555519.xyz/uploads3/20220607/c7c956487ed83b839ccf2d8bf822e693.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先右键自己创建的项目，然后点击add framework support</p> <p><img decoding="async" alt="" height="942" src="http://img.555519.xyz/uploads3/20220607/76ad2bf7b5c6d07790296bf87ee08580.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选择Web application，然后点ok</p> <p><img loading="lazy" decoding="async" alt="" height="331" src="http://img.555519.xyz/uploads3/20220607/2a657f76112d787d3912767acdb66247.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们可以发现多了一个web文件夹，这个web文件夹里面就是放自己的web文件，例如html文件，jsp文件等，web下面的WEB-INF目录里面的web.xml就是用来配置这个web项目的，在WEB-INF下面我们一般会建立一个lib文件夹用于存放项目所需的jar包。</p> <hr/> <h2>配置tomcat</h2> <p>&nbsp; &nbsp; &nbsp; &nbsp; 创建web项目后我们需要配置tomcat才能运行，下面我们来进行配置。</p> <p><img loading="lazy" decoding="async" alt="" height="506" src="http://img.555519.xyz/uploads3/20220607/ac10e6f7afc04294b133bed480c12cac.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先点击add configuration</p> <p><img loading="lazy" decoding="async" alt="" height="803" src="http://img.555519.xyz/uploads3/20220607/01e08ca4bd8bbb965bf3453600b9d9a5.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后点击+号</p> <p><img loading="lazy" decoding="async" alt="" height="337" src="http://img.555519.xyz/uploads3/20220607/d15db856ab0e832b7a3d17917840e898.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下拉选择tomcat server下的local</p> <p><img loading="lazy" decoding="async" alt="" height="420" src="http://img.555519.xyz/uploads3/20220607/8527500f6c84c298e499be4a46c2ef70.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于我已经配置过，所以自动选择了，如果没有没有自动选择，点击configuration，点击+号，在tomcat选择自己的tomcat目录即可</p> <p><img loading="lazy" decoding="async" alt="" height="294" src="http://img.555519.xyz/uploads3/20220607/7454755a44e54e65f5abfcfb994524e8.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回到配置界面</p> <p><img loading="lazy" decoding="async" alt="" height="456" src="http://img.555519.xyz/uploads3/20220607/4e4aa78443690c0f67bc372a35208817.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们在这个界面中首先点击deployment，先配置自己的项目名称，也就是外部访问的项目名称</p> <p><img loading="lazy" decoding="async" alt="" height="341" src="http://img.555519.xyz/uploads3/20220607/d84e68b6dcb627a836055e402353b7e3.jpg"></p> <p>点击+号，选择发布方式(第一个选项为war包，第二个选项为源码)，我们选择Artifact</p> <p><img loading="lazy" decoding="async" alt="" height="278" src="http://img.555519.xyz/uploads3/20220607/5fe005d929e21437a599eca6d0d70fa0.jpg">&nbsp;选择后下滑修改对外访问路径，我一般和项目名称一致</p> <p><img loading="lazy" decoding="async" alt="" height="191" src="http://img.555519.xyz/uploads3/20220607/a9c7cad0eb56878c9afefd50891764c9.jpg"></p> <p><img loading="lazy" decoding="async" alt="" height="210" src="http://img.555519.xyz/uploads3/20220607/8aaeff5a6afd26793e5b0be7b03e19e3.jpg"></p> <p>&nbsp;然后回到serve界面</p> <p><img loading="lazy" decoding="async" alt="" height="541" src="http://img.555519.xyz/uploads3/20220607/78954f676c610ca07d85755cf0041111.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 这里设置tomcat的名字</p> <p><img loading="lazy" decoding="async" alt="" height="84" src="http://img.555519.xyz/uploads3/20220607/da961d9febe692254a16bd0aec3a9b71.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里选择发布项目后是否默认打开游览器，以及打开哪个游览器，根据自己需要进行选择</p> <p><img loading="lazy" decoding="async" alt="" height="254" src="http://img.555519.xyz/uploads3/20220607/a9c53e28496a3805ad1b8cb98a82607a.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里是我们对外访问的url<img loading="lazy" decoding="async" alt="" height="93" src="http://img.555519.xyz/uploads3/20220607/05ce3ae82baf128f87cca0025e8475dc.jpg"></p> <p>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后我们把下面2个选项设置为热加载，表示我们在修改文件后就会生效(修改java文件后需要重新发布才会生效)</p> <p><img loading="lazy" decoding="async" alt="" height="137" src="http://img.555519.xyz/uploads3/20220607/dc04851c9db16e31fb8afd7a3db4b3bf.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里是设置端口，根据自己的需要来设置</p> <p><img loading="lazy" decoding="async" alt="" height="182" src="http://img.555519.xyz/uploads3/20220607/7e9c86df16d82ea140b87355e6f331fb.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;都设置好后我们点击apply后点击ok</p> <p><img loading="lazy" decoding="async" alt="" height="947" src="http://img.555519.xyz/uploads3/20220607/da7077aeb670da0aa539f8f195a66c22.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 我们可以看见这个界面，表示已经配置好了</p> <p><img loading="lazy" decoding="async" alt="" height="475" src="http://img.555519.xyz/uploads3/20220607/aa0d4fa4b77bc7d2095622b039168d2d.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;启动一下，服务器启动成功，但是控制台输出乱码</p> <p><img loading="lazy" decoding="async" alt="" height="388" src="http://img.555519.xyz/uploads3/20220607/52481aa38621fab413a9bf8d8172b384.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;这个有多种解决方法，我们随便选择一种，首先我们点击idea界面的file，选择setting，进入设置界面</p> <p><img loading="lazy" decoding="async" alt="" height="792" src="http://img.555519.xyz/uploads3/20220607/a190a4b18a8831897505543dc7a80840.jpg"></p> <p><img loading="lazy" decoding="async" alt="" height="803" src="http://img.555519.xyz/uploads3/20220607/4152bf04c7a0bea0aad972f9e6f9acdc.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后我们在搜索框中输入console ，回车</p> <p><img loading="lazy" decoding="async" alt="" height="1008" src="http://img.555519.xyz/uploads3/20220607/39b4bd79bff7a67538df55d2eb4eba02.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后我们把默认编码改为GBK</p> <p><img loading="lazy" decoding="async" alt="" height="394" src="http://img.555519.xyz/uploads3/20220607/4eb6f104dc8743822d1c6bc0b071b9eb.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击apply，然后点击ok，重新启动服务器，发现控制台正常输出</p> <p><img loading="lazy" decoding="async" alt="" height="449" src="http://img.555519.xyz/uploads3/20220607/6648a8ee06a1f2523fd0fdb8c2533b57.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;访问服务器，网页显示为</p> <p><img loading="lazy" decoding="async" alt="" height="203" src="http://img.555519.xyz/uploads3/20220607/7d999ffb282ce1855bcaaf941ce7df51.jpg">&nbsp; &nbsp; &nbsp; &nbsp; 其实访问这个网址，默认访问的就是<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://localhost:8080/tomcat/"  title="http://localhost:8080/tomcat/" rel="nofollow">http://localhost:8080/tomcat/</a>&nbsp;下面的index.jsp文件，我们修改下index.jsp文件，让其输出Hello Toncat</p> <p><img loading="lazy" decoding="async" alt="" height="495" src="http://img.555519.xyz/uploads3/20220607/8a3f4c65f5e40d202925e408fb6935c8.jpg"></p> <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;再次访问，发现网页已经显示Hello Tomcat</p> <p><img loading="lazy" decoding="async" alt="" height="221" src="http://img.555519.xyz/uploads3/20220607/0a67e5eb21c6d8c716b5d5a7d282074f.jpg"></p> <p><strong>到此，我们已经成功在idea中部署了web项目，配置了tomcat，并解决了启动tomcat控制台输出乱码问题。启动服务器能够正常运行。</strong></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-73035.htm">什么命格的人不能养猫（什么命格的人不能养龟）</a></p>
+                                        <p>下一个：<a href="/news/article-73703.htm">南京猫咪领养（南京猫咪领养吧）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-53373.htm" title="React + TypeScript实战（一）设定事件处理函数的参数类型">React + TypeScript实战（一）设定事件处理函数的参数类型</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-free-v2ray-subscribe.htm" title="VPN机场 | 3月7日22.1M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址">VPN机场 | 3月7日22.1M/S|免费VPN/V2ray/SSR/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-67789.htm" title="SpringCloud系列之分布式请求链路跟踪(Sleuth)">SpringCloud系列之分布式请求链路跟踪(Sleuth)</a></li>
+                        <li class="py-2"><a href="/news/article-67168.htm" title="动物接种疫苗产生的免疫力为什么 动物接种疫苗产生的免疫力为什么那么低">动物接种疫苗产生的免疫力为什么 动物接种疫苗产生的免疫力为什么那么低</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-9-free-node-subscribe.htm" title="VPN机场 | 2月9日18.2M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址">VPN机场 | 2月9日18.2M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-28-free-v2ray-subscribe.htm" title="VPN机场 | 2月28日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址">VPN机场 | 2月28日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-69085.htm" title="Vue组件之间传值/调用方法的几种方式">Vue组件之间传值/调用方法的几种方式</a></li>
+                        <li class="py-2"><a href="/news/article-57057.htm" title="安装Pytorch如何选择CUDA的版本">安装Pytorch如何选择CUDA的版本</a></li>
+                        <li class="py-2"><a href="/news/article-58828.htm" title="青岛想念动物医院怎么样呀（青岛想念动物医院怎么样呀电话）">青岛想念动物医院怎么样呀（青岛想念动物医院怎么样呀电话）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-v2ray-subscribe.htm" title="VPN机场 | 3月12日21.3M/S|免费VPN/SSR/V2ray/Shadowrocket/Clash免费节点链接地址">VPN机场 | 3月12日21.3M/S|免费VPN/SSR/V2ray/Shadowrocket/Clash免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">63</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+        <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <a href="/">VPN机场 订阅链接中文网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/freesstap/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/website/js/frontend/freesstap/popper.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="/assets/website/js/frontend/freesstap/scrollreveal.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/jquery.counterup.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="/assets/website/js/frontend/freesstap/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
