@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-74372.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>SpringSecurity如何使用注解控制权限</title>
+        <meta name="description" content="一般的系统在权限设计上，都会分为角色、权限（RDBC），复杂一点的可能会有用户组、组织之类的概念。 用户的权限是写死的，对应于后台的接口或者资源，是没办法改变的，一般不对用户开放修改权限。 管理员用户" />
+        <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN机场 订阅链接中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-74372.htm" />
+    <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
+    <meta property="og:title" content="SpringSecurity如何使用注解控制权限" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/ceae26815c00f61215664fbce0cbb8d8.webp" />
+        <meta property="og:release_date" content="2025-03-15T07:20:44" />
+    <meta property="og:updated_time" content="2025-03-15T07:20:44" />
+        <meta property="og:description" content="一般的系统在权限设计上，都会分为角色、权限（RDBC），复杂一点的可能会有用户组、组织之类的概念。 用户的权限是写死的，对应于后台的接口或者资源，是没办法改变的，一般不对用户开放修改权限。 管理员用户" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SpringSecurity如何使用注解控制权限">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/font-awesome.css">
+    <link rel="stylesheet" href="/assets/website/css/freesstap/templatemo-softy-pinko.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRKT8FD20L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRKT8FD20L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                                                    <span>VPN机场</span>
+                                                </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h2>SpringSecurity如何使用注解控制权限</h2>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>一般的系统在权限设计上，都会分为角色、权限（RDBC），复杂一点的可能会有用户组、组织之类的概念。</p> <p>用户的权限是写死的，对应于后台的接口或者资源，是没办法改变的，一般不对用户开放修改权限。</p> <p>管理员用户可以通过给角色分配权限的方式，来实现访问控制。</p> <p>所以当我们写过滤器，或者用一些安全框架时（比如Shiro，Spring Security），也需要将可变的“角色”，转化为不可变的“权限”，注入到框架中。</p> <p>具体的可以看我之前写的一篇（Spring Security整合jwt完整版）：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/qq_37855749/article/details/111300906"  rel="nofollow">https://blog.csdn.net/qq_37855749/article/details/111300906</a></p> <p>注入当前用户的权限后，就需要进行访问控制了。</p> <p>常见的做法有</p> <p>1、路径比对</p> <p>之前有个项目用过一次，定义一个过滤器，添加到security的过滤链中，在这个过滤器中做这么一件事：</p> <p>分析当前访问路径所需要的权限，检查当前用户是否具有该权限，做一个对比，根据对比结果来决定当前用户是否可以访问该资源。</p> <p>这种做法的好处是代码的入侵性不高，不需要再每个接口上加注解。但相对来说，显得不那么直观，可读性比较差，所以这次换个方法。</p> <p>2、使用注解的方式</p> <p>SpringSecurity使用注解来控制访问时，需要提前开启这个功能。</p> <p>在配置类上加上注解</p> <pre><code>@Configuration @EnableWebSecurity @EnableGlobalMethodSecurity(prePostEnabled = true) public class SecurityConfig extends WebSecurityConfigurerAdapter {<!-- --></code></pre> <p>在接口中如此使用</p> <pre><code>    /**      * 条件查询      */     @PreAuthorize("hasAuthority('IMPORT:SELECT')")     @ApiOperation(value = "查询")     @GetMapping("/list")     public R&lt;Page&lt;Task&gt;&gt; list(TaskDto taskDto){         //测试阶段，随机生成任务         Random random = new Random();          //todo         int i = random.nextInt(4);         if(i == 2) {             metroServerAdapterService.reloadShelveTask();         }         Page&lt;Task&gt; list = taskService.list(taskDto);         return R.ok(list);     }</code></pre> <p>hasAuthority可以替换成hasRole，虽然可以达到相同的目的，但是在使用的方法上还是有些不同的。</p> <p>hasRole要求内容必须以"ROLE_"开头，也是官方推荐的命名方式，否则没有效果。但是hasAuthority没有限制，数据库中怎样写的，代码里就怎么写。</p> <p>同样的功能的注解为什么要有两个名字呢。或许这么做可能在语义上比较清晰明确一点，将角色与权限这两个概念稍加区分。</p> <p>仔细想一下，确实有些小型的系统或许压根就不需要权限，只有给用户分配角色，没有给角色分配权限这一过程。这样的话，角色也是不可变的，就可以根据角色来做访问控制了。</p> <p>但考虑通用性，个人觉得用hasAuthority就可以了。</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-73703.htm">南京猫咪领养（南京猫咪领养吧）</a></p>
+                                        <p>下一个：<a href="/news/article-74374.htm">聊聊 node 如何优雅地获取 mac 系统版本</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-53740.htm" title="免费领养狗的套路（免费领养狗狗的套路）">免费领养狗的套路（免费领养狗狗的套路）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-11-free-subscribe-node.htm" title="VPN机场 | 2月11日19.3M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址">VPN机场 | 2月11日19.3M/S|免费VPN/Clash/Shadowrocket/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-71044.htm" title="成都领养宠物中心在哪儿啊（成都领养宠物中心在哪儿啊电话）">成都领养宠物中心在哪儿啊（成都领养宠物中心在哪儿啊电话）</a></li>
+                        <li class="py-2"><a href="/news/article-75056.htm" title="无货源网店操作流程（无货源网店怎么操作）">无货源网店操作流程（无货源网店怎么操作）</a></li>
+                        <li class="py-2"><a href="/news/article-68430.htm" title="Android开发基础——Activity生命周期">Android开发基础——Activity生命周期</a></li>
+                        <li class="py-2"><a href="/news/article-57619.htm" title="小孩被猫咬了一下轻微破皮要打针吗（孩子被猫咬破了一点点怎么办）">小孩被猫咬了一下轻微破皮要打针吗（孩子被猫咬破了一点点怎么办）</a></li>
+                        <li class="py-2"><a href="/news/article-63442.htm" title="狗粮颗粒机器价格多少合适（狗粮颗粒机 配方）">狗粮颗粒机器价格多少合适（狗粮颗粒机 配方）</a></li>
+                        <li class="py-2"><a href="/news/article-73702.htm" title="IDEA部署Tomcat(超详细)">IDEA部署Tomcat(超详细)</a></li>
+                        <li class="py-2"><a href="/news/article-59908.htm" title="什么是动物疫苗,有哪些种类? 什么是动物疫苗,有哪些种类的">什么是动物疫苗,有哪些种类? 什么是动物疫苗,有哪些种类的</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-18-free-node-subscribe-links.htm" title="VPN机场 | 2月18日21.9M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址">VPN机场 | 2月18日21.9M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">63</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+        <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <a href="/">VPN机场 订阅链接中文网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/freesstap/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/website/js/frontend/freesstap/popper.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="/assets/website/js/frontend/freesstap/scrollreveal.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/jquery.counterup.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="/assets/website/js/frontend/freesstap/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

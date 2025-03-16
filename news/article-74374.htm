@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-74374.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>聊聊 node 如何优雅地获取 mac 系统版本</title>
+        <meta name="description" content="背景 今天突然碰到了一个兼容性需求，需要根据不同 macOS 版本，进行不同的兼容性处理。 没想到看似简单的需求，中间也经历了一番波折，好在最后解决了问题。 在此记录一下解决问题的过程，也方便其他有类" />
+        <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN机场 订阅链接中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-74374.htm" />
+    <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
+    <meta property="og:title" content="聊聊 node 如何优雅地获取 mac 系统版本" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/16de02688387309ff623684874c15834.webp" />
+        <meta property="og:release_date" content="2025-03-15T07:20:44" />
+    <meta property="og:updated_time" content="2025-03-15T07:20:44" />
+        <meta property="og:description" content="背景 今天突然碰到了一个兼容性需求，需要根据不同 macOS 版本，进行不同的兼容性处理。 没想到看似简单的需求，中间也经历了一番波折，好在最后解决了问题。 在此记录一下解决问题的过程，也方便其他有类" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="聊聊 node 如何优雅地获取 mac 系统版本">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/font-awesome.css">
+    <link rel="stylesheet" href="/assets/website/css/freesstap/templatemo-softy-pinko.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRKT8FD20L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRKT8FD20L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                                                    <span>VPN机场</span>
+                                                </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h2>聊聊 node 如何优雅地获取 mac 系统版本</h2>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<h2 id="背景">背景</h2> <p>今天突然碰到了一个兼容性需求，需要根据不同 macOS 版本，进行不同的兼容性处理。</p> <p>没想到看似简单的需求，中间也经历了一番波折，好在最后解决了问题。</p> <p>在此记录一下解决问题的过程，也方便其他有类似需求的同学参考。</p> <h2 id="获取系统类型">获取系统类型</h2> <p>既然需要针对 mac 系统进行兼容性处理，首先需要区分系统类型，好在 node 提供了相关的 API，只需使用<code>os.platform()</code> 即可直接获取系统类型。</p> <pre><code class="language-TypeScript">import { platform } from 'os';  console.log(platform()); // 'darwin'</code></pre> <p>值得一提的是，macOS 对应的名称不是<code>macOS</code> 而是<strong><code>darwin</code></strong>。</p> <p>除了可以通过<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://nodejs.cn/api/os.html"  target="_blank" rel="nofollow">os</a> 这个包获取系统类型，我们还可以通过<code>process.platform</code> 来获取。</p> <pre><code class="language-TypeScript">import { platform } from 'process';  console.log(platform); // 'darwin'</code></pre> <h2 id="获取系统版本">获取系统版本</h2> <p>很多熟悉 node 的同学这时候会说了，可以通过<code>os.release()</code> 快速获取系统版本。但是，当你执行<code>os.release()</code> ，你会发现，它的结果并符合常规认知。</p> <p>比如，我的系统版本是<code>12.0.1</code>，但是，<code>os.release()</code> 的执行结果却是<code>21.1.0</code>。</p> <p>查看<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://nodejs.cn/api/os.html#osrelease"  target="_blank" rel="nofollow">node 官方文档</a>可以发现，node 是通过<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://linux.die.net/man/3/uname"  target="_blank" rel="nofollow">uname(3)</a> 来确定操作系统的，所以执行结果比较违背常规认知。</p> <h2 id="通过命令行获取系统版本">通过命令行获取系统版本</h2> <p>既然<code>os.release()</code> 获取的系统版本很难让人理解，那么有没有什么方案可以直接获取实际的系统版本号呢？</p> <p>mac 上存在<code>sw_vers</code> 命令，可以直接获取系统信息。</p> <pre><code class="language-Bash">$ sw_vers ProductName:    macOS ProductVersion: 12.0.1 BuildVersion:   21A559</code></pre> <p>可以看到<code>sw_vers</code> 命令直接获取到了系统版本：<code>12.0.1</code> 。</p> <p>如果不需要其他系统信息，我们可以通过添加命令行参数，过滤命令行结果，直接获取系统版本。</p> <pre><code class="language-Bash">$ sw_vers -ProductVersion 12.0.1</code></pre> <p>由于命令行不区分大小写，所以命令行参数无所谓大小写，你也可以写成<code>-productversion</code> 或者<code>-ProductVersion</code>。</p> <p>既然知道命令行怎么写，接下来我们只需要在 node 中调用命令行即可。</p> <pre><code class="language-TypeScript">import { execSync } from 'child_process'; console.log(execSync('sw_vers -ProductVersion', { encoding: 'utf-8' })); // 12.0.1</code></pre> <h2 id="优雅地获取系统版本">优雅地获取系统版本</h2> <p>通过 node 子进程执行命令行命令，可以获取正确的系统版本。但是这种方式有着性能方面的缺陷，需要创建子进程执行命令行，相对于<code>os.release()</code> 的方式，开销较大。</p> <p>之前使用<code>os.release()</code> 的问题在于返回结果比较违反常规认知，但是它的结果其实是正确的，只不过需要进行一次映射。</p> <p>所以，通过<code>os.release()</code> 配合映射表即可优雅地获取系统版本。</p> <pre><code class="language-TypeScript">import os from 'os';  const macVersionMap = new Map([   [21, ['Monterey', '12']],   [20, ['Big Sur', '11']],   [19, ['Catalina', '10.15']],   [18, ['Mojave', '10.14']],   [17, ['High Sierra', '10.13']],   [16, ['Sierra', '10.12']],   [15, ['El Capitan', '10.11']],   [14, ['Yosemite', '10.10']],   [13, ['Mavericks', '10.9']],   [12, ['Mountain Lion', '10.8']],   [11, ['Lion', '10.7']],   [10, ['Snow Leopard', '10.6']],   [9, ['Leopard', '10.5']],   [8, ['Tiger', '10.4']],   [7, ['Panther', '10.3']],   [6, ['Jaguar', '10.2']],   [5, ['Puma', '10.1']], ]);  const getMacRelease = (release: string) =&gt; {   const macRelease = release ?? os.release();   const firstReleaseVersion = Number(macRelease.split('.')[0]);   const [name, version] = macVersionMap.get(firstReleaseVersion) || [     'Unknown',     '',   ];    return {     name,     version,   }; };  console.log(getMacRelease()) // 12</code></pre> <p>为了方便 mac 新发布系统后依然能够识别，将新系统版本名称识别为<code>Unknow</code>，新版本识别为空字符串。</p> <p>此举是学习移动端机型打分平台，如果出现版本为空时，默认为高版本，不影响低版本的兼容性处理。</p> <p>现在，我们就能够通过 node 优雅地获取系统版本啦。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-74372.htm">SpringSecurity如何使用注解控制权限</a></p>
+                                        <p>下一个：<a href="/news/article-75055.htm">宠物狗打疫苗可以自己打吗（狗打疫苗能自己打吗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-67170.htm" title="动物疫苗企业排名前十有哪些（动物疫苗上市公司排名）">动物疫苗企业排名前十有哪些（动物疫苗上市公司排名）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-1-clash-v2ray-ss-ssr.htm" title="VPN机场 | 3月1日22M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN机场 | 3月1日22M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-19-free-subscribe-node.htm" title="VPN机场 | 2月19日19M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址">VPN机场 | 2月19日19M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-13-node-share-links.htm" title="VPN机场 | 2月13日19.3M/S|免费VPN/Shadowrocket/Clash/V2ray/SSR免费节点链接地址">VPN机场 | 2月13日19.3M/S|免费VPN/Shadowrocket/Clash/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-25-clash-v2ray-ss-ssr.htm" title="VPN机场 | 2月25日19.7M/S|免费VPN/V2ray/Clash/Shadowrocket/SSR免费节点链接地址">VPN机场 | 2月25日19.7M/S|免费VPN/V2ray/Clash/Shadowrocket/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-14-node-share.htm" title="VPN机场 | 2月14日22.6M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN机场 | 2月14日22.6M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-65906.htm" title="宠物粮食店铺图片大全（宠物粮食生意怎么样）">宠物粮食店铺图片大全（宠物粮食生意怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-53374.htm" title="从没出过门的猫走丢了能自己回家吗（从没出过门的猫走丢了能自己回家吗视频）">从没出过门的猫走丢了能自己回家吗（从没出过门的猫走丢了能自己回家吗视频）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-free-v2ray-subscribe.htm" title="VPN机场 | 3月15日21.9M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址">VPN机场 | 3月15日21.9M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-v2ray-subscribe.htm" title="VPN机场 | 3月12日21.3M/S|免费VPN/SSR/V2ray/Shadowrocket/Clash免费节点链接地址">VPN机场 | 3月12日21.3M/S|免费VPN/SSR/V2ray/Shadowrocket/Clash免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">63</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+        <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <a href="/">VPN机场 订阅链接中文网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/freesstap/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/website/js/frontend/freesstap/popper.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="/assets/website/js/frontend/freesstap/scrollreveal.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/jquery.counterup.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="/assets/website/js/frontend/freesstap/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
