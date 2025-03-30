@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-84744.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>水平无限循环弹幕的实现</title>
+        <meta name="description" content="前言 在项目实践中应该有很多场景会用到弹幕，那么如何实现一个完美版本的弹幕呢？接下来我们原理加代码带你实现一个完整的弹幕组件(react版本) 无限循环的水平弹幕实现原理 针对实现原理，这里我画了一张" />
+        <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN机场 订阅链接中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-84744.htm" />
+    <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
+    <meta property="og:title" content="水平无限循环弹幕的实现" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/3b11e3314555600c1c79f8624d4ef06e.webp" />
+        <meta property="og:release_date" content="2025-03-30T09:35:05" />
+    <meta property="og:updated_time" content="2025-03-30T09:35:05" />
+        <meta property="og:description" content="前言 在项目实践中应该有很多场景会用到弹幕，那么如何实现一个完美版本的弹幕呢？接下来我们原理加代码带你实现一个完整的弹幕组件(react版本) 无限循环的水平弹幕实现原理 针对实现原理，这里我画了一张" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="水平无限循环弹幕的实现">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/font-awesome.css">
+    <link rel="stylesheet" href="/assets/website/css/freesstap/templatemo-softy-pinko.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRKT8FD20L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRKT8FD20L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                                                    <span>VPN机场</span>
+                                                </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h2>水平无限循环弹幕的实现</h2>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div class="article-content"> <h2 class="heading">前言</h2> <p>在项目实践中应该有很多场景会用到弹幕，那么如何实现一个完美版本的弹幕呢？接下来我们原理加代码带你实现一个完整的弹幕组件(react版本)</p> <h2 class="heading">无限循环的水平弹幕实现原理</h2> <p>针对实现原理，这里我画了一张原理图，大家可以看一下：</p> <figure><figcaption></figcaption></figure> <p>水平弹幕的实现有两种情况：</p> <p>1、当弹幕的个数加起来的宽度不足以覆盖屏幕的可视化区域</p> <p>2、当弹幕的个数加起来的宽度超过屏幕的可视化区域</p> <p>针对以上两种情况我们有不同的展示效果，如下链接的展示效果：</p> <p>针对第一种情况，实现原理很简单，当从初始化位置开始滚动的时候，计算滚动的距离，当滚动结束后，立马让其回到初始化位置。</p> <p>第二种情况稍微复杂一些，我们需要利用人眼的视觉暂留效果，实现弹幕的偷梁换柱，具体怎么实现呢？</p> <ol> <li> <p>初始化位置在屏幕最右侧，也就是隐藏在屏幕外面，这一点和上一种情况一致</p> </li> <li> <p>我们需要使用一个计算好的速度做一次动画滑到屏幕的最左侧，也就是后面循环往复的动画的初始化位置，这个初始化位置和第一点的初始化位置不是同一个。 2.1. 计算这个速度很简单，只需要知道我们做完全部动画的时间以及弹幕的总长度，得到的便是平均速度，之后再乘以屏幕的可视化区域宽度</p> </li> <li> <p>需要计算好我们在原有弹幕个数的基础上需要补充多少个弹幕才能超过屏幕可视化区域，做这个步骤是因为，只有补充这些弹幕，才能保证补充的弹幕的第一个滑到最左侧的时候整个弹幕整体瞬间回到初始化位置的时候，不会让用户看出端倪，也就是没有顿挫感。</p> </li> <li> <p>定好keyframe的具体参数即可开始做动画。</p> </li> </ol> <h2 class="heading">实现的代码</h2> <p>实现的代码是一个组件，这个组件有兴趣的童鞋可以将其丰富化，增加更多的参数，支持各种方向的循环滚动。</p> <pre><code class="hljs bash copyable">class InfiniteScroll extends React.Component {<span class="hljs-function"><span class="hljs-title">componentDidMount</span></span>() {     const { animationName, scrollDirection } = this.props<span class="hljs-built_in">set</span>Timeout(() =&gt; {<span class="hljs-keyword">if</span> (this.scrollInstance) {         const appendElementWidth = []         const appendElement = []         const visibleWidth = this.scrollInstance.clientWidth         // 滚动的初始位置从视口的最右边开始，后面支持更多方向         const initPosition = visibleWidth<span class="hljs-built_in">let</span> scrollContainerWidth = 0<span class="hljs-built_in">let</span> isCoverViewPort =<span class="hljs-literal">false</span>         // 遍历滚动的所有元素<span class="hljs-keyword">for</span> (<span class="hljs-built_in">let</span> i = 0; i &lt; this.scrollInstance.children.length; i += 1) {           const style = this.scrollInstance.children[i].currentStyle || window.getComputedStyle(this.scrollInstance.children[i])           // width 已经包含了border和padding，如果box-sizing变化了呢？           const width = this.scrollInstance.children[i].offsetWidth// or use style.width           const margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight)            const clientWidth = (width + margin)           scrollContainerWidth += clientWidth           // 保存需要追加到原有滚动元素的列表后面<span class="hljs-keyword">if</span> (scrollContainerWidth &lt; visibleWidth * 2 &amp;&amp; !isCoverViewPort) {             appendElementWidth.push(clientWidth)             appendElement.push(this.scrollInstance.children[i].cloneNode(<span class="hljs-literal">true</span>))<span class="hljs-keyword">if</span> (scrollContainerWidth &gt;= visibleWidth &amp;&amp; !isCoverViewPort) {               isCoverViewPort =<span class="hljs-literal">true</span>             }           }         }         // 该参数记录是否弹幕的宽度超过了屏幕可视化区域的宽度         const isScrollWidthLargeViewPort = scrollContainerWidth &gt; visibleWidth          // const styleSheet = document.styleSheets[0]          // 注意这里的动画初始化位置两种情况是不一样的，在之前的步骤上有说过的(垂直方向的没实现，可以忽略掉~)         const keyframes = `         @keyframes<span class="hljs-variable">${animationName}</span>{           from{             transform:<span class="hljs-variable">${scrollDirection === 'horizon' ? `translateX(${isScrollWidthLargeViewPort ? 0 : initPosition}</span>px)` :<span class="hljs-string">'translateY(0px)'</span>};           }           to {             transform:<span class="hljs-variable">${scrollDirection === 'horizon' ? `translateX(-${scrollContainerWidth}</span>px)` : `translateX(-<span class="hljs-variable">${scrollContainerWidth}</span>px)`};           }         }         @-webkit-keyframes<span class="hljs-variable">${animationName}</span>{           from{             -webkit-transform:<span class="hljs-variable">${scrollDirection === 'horizon' ? `translateX(${isScrollWidthLargeViewPort ? 0 : initPosition}</span>px)` :<span class="hljs-string">'translateY(0px)'</span>};           }           to {             -webkit-transform:<span class="hljs-variable">${scrollDirection === 'horizon' ? `translateX(-${scrollContainerWidth}</span>px)` : `translateX(-<span class="hljs-variable">${scrollContainerWidth}</span>px)`};           }         }         `         const style = document.createElement(<span class="hljs-string">'style'</span>)         const head = document.head || document.getElementsByTagName(<span class="hljs-string">'head'</span>)[0]          style.type =<span class="hljs-string">'text/css'</span>         const textNode = document.createTextNode(keyframes);         style.appendChild(textNode);         head.appendChild(style)         // 如果css是external的话会报错：Uncaught DOMException: Failed to<span class="hljs-built_in">read</span> the<span class="hljs-string">'cssRules'</span> property from<span class="hljs-string">'CSSStyleSheet'</span>: Cannot access rules         // styleSheet.insertRule(keyframes, styleSheet.cssRules.length);         const previousWidth = scrollContainerWidth         // 这个计算之后scrollContainerWidth就会包含那些补充了的弹幕的宽度，所以需要保留一个原始值，供后面的过渡动画使用<span class="hljs-keyword">if</span> (isScrollWidthLargeViewPort) {           appendElement.map(node =&gt; this.scrollInstance.appendChild(node))           appendElementWidth.map(it =&gt; scrollContainerWidth += it)         }          // TODO: 动画的速度以后需要使用props         // 因为初始化位置在视口外，但是我们动画的初始位置都是在0px上，所以就会有一个时差出现，         // 因为在animation生效之前需要有一个过渡动画，二者的时间是相等的         const delay = (this.scrollInstance.children.length * 3 * visibleWidth) / previousWidth         const styleText = isScrollWidthLargeViewPort ? `         width:<span class="hljs-variable">${scrollContainerWidth}</span>px;         transform: translateX(0px);         -webkit-transform: translateX(0px);         transition:<span class="hljs-variable">${delay}</span>s linear;         -webkit-transition:<span class="hljs-variable">${delay}</span>s linear;         animation:<span class="hljs-variable">${animationName}</span><span class="hljs-variable">${this.scrollInstance.children.length * 3}</span>s linear<span class="hljs-variable">${delay}</span>s infinite;         -webkit-animation:<span class="hljs-variable">${animationName}</span><span class="hljs-variable">${this.scrollInstance.children.length * 3}</span>s linear<span class="hljs-variable">${delay}</span>s infinite;       ` : `       width:<span class="hljs-variable">${scrollContainerWidth}</span>px;       animation:<span class="hljs-variable">${animationName}</span><span class="hljs-variable">${this.scrollInstance.children.length * 3}</span>s linear infinite;       -webkit-animation:<span class="hljs-variable">${animationName}</span><span class="hljs-variable">${this.scrollInstance.children.length * 3}</span>s linear infinite;     `         this.scrollInstance.style.cssText = styleText       }     }, 500)   }<span class="hljs-function"><span class="hljs-title">render</span></span>() {     const { scrollContent, scrollItemClass, scrollClass, scrollDirection } = this.props      const scrollClasses = scrollDirection ===<span class="hljs-string">'vertical'</span> ? `scroll-list vertical<span class="hljs-variable">${scrollClass}</span>` : `scroll-list horizon<span class="hljs-variable">${scrollClass}</span>`<span class="hljs-built_in">return</span> (       &lt;div className={scrollClasses} ref={ref =&gt; this.scrollInstance = ref}&gt;         {           scrollContent.map((content, index) =&gt; (&lt;div key={index} className={scrollItemClass}&gt;{content}&lt;/div&gt;))         }       &lt;/div&gt;     )   } }<span class="copy-code-btn">复制代码</span></code></pre> <p>对应的CSS文件如下：</p> <pre><code class="hljs bash copyable">.scroll-list{   display: flex;   &amp;.horizon {     flex-direction: row;   }   &amp;.vertical{     flex-direction: column;   } }<span class="copy-code-btn">复制代码</span></code></pre> <p>完整的应用参考：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://link.juejin.im?target=https%3A%2F%2Fjsfiddle.net%2Flinxiaowu%2Feyacbts0%2F"  rel="nofollow">jsFiddle</a></p> <p>至此完整版的水平循环弹幕实现完毕，有问题的欢迎留言~~</p> </div> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-84025.htm">给猫打狂犬疫苗去哪里（给猫打狂犬疫苗在哪个部位打）</a></p>
+                                        <p>下一个：<a href="/news/article-84745.htm">动物疫苗种类及类型分类图片大全（动物疫苗接种技术）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-16-free-node-subscribe.htm" title="VPN机场 | 2月16日19.8M/S|免费VPN/Shadowrocket/Clash/V2ray/SSR免费节点链接地址">VPN机场 | 2月16日19.8M/S|免费VPN/Shadowrocket/Clash/V2ray/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-28-free-v2ray-subscribe.htm" title="VPN机场 | 2月28日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址">VPN机场 | 2月28日22.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-77771.htm" title="宠物家庭寄养协议书范本免费（宠物寄养协议书标准版）">宠物家庭寄养协议书范本免费（宠物寄养协议书标准版）</a></li>
+                        <li class="py-2"><a href="/news/article-56498.htm" title="动物医院英文绘本怎么写图片 动物医院英文绘本怎么写图片大全">动物医院英文绘本怎么写图片 动物医院英文绘本怎么写图片大全</a></li>
+                        <li class="py-2"><a href="/news/article-79140.htm" title="动物疫苗打一次管多长时间啊图片（动物疫苗打一次管多长时间啊图片视频）">动物疫苗打一次管多长时间啊图片（动物疫苗打一次管多长时间啊图片视频）</a></li>
+                        <li class="py-2"><a href="/news/article-75734.htm" title="上海宠物医院收费价目表查询（上海良心的宠物医院）">上海宠物医院收费价目表查询（上海良心的宠物医院）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-free-high-speed-nodes.htm" title="VPN机场 | 3月30日22.4M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址">VPN机场 | 3月30日22.4M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-26-free-high-speed-nodes.htm" title="VPN机场 | 2月26日19.4M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址">VPN机场 | 2月26日19.4M/S|免费VPN/Shadowrocket/Clash/SSR/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-65289.htm" title="宠物粮食批发价格 宠物粮食批发价格表">宠物粮食批发价格 宠物粮食批发价格表</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-free-v2ray.htm" title="VPN机场 | 3月17日22.2M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址">VPN机场 | 3月17日22.2M/S|免费VPN/SSR/Clash/V2ray/Shadowrocket免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">63</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+        <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <a href="/">VPN机场 订阅链接中文网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/freesstap/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/website/js/frontend/freesstap/popper.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="/assets/website/js/frontend/freesstap/scrollreveal.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/jquery.counterup.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="/assets/website/js/frontend/freesstap/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
