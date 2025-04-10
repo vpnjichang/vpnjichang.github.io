@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-92025.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>Android 白天黑夜模式切换适配及引起的Activity销毁重启解决</title>
+        <meta name="description" content="目录  一、白夜模式切换,Activity销毁重启解决: 二、 暗黑模式适配 &nbsp;1. 添加依赖: &nbsp; 2. 复制下面工具类方法直接使用即可: 3.资源适配: &nbsp;4. 适配" />
+        <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN机场 订阅链接中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-92025.htm" />
+    <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
+    <meta property="og:title" content="Android 白天黑夜模式切换适配及引起的Activity销毁重启解决" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/e2d78e422fc6dbade9a29cb6ff33a904.webp" />
+        <meta property="og:release_date" content="2025-04-09T09:17:30" />
+    <meta property="og:updated_time" content="2025-04-09T09:17:30" />
+        <meta property="og:description" content="目录  一、白夜模式切换,Activity销毁重启解决: 二、 暗黑模式适配 &nbsp;1. 添加依赖: &nbsp; 2. 复制下面工具类方法直接使用即可: 3.资源适配: &nbsp;4. 适配" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Android 白天黑夜模式切换适配及引起的Activity销毁重启解决">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/font-awesome.css">
+    <link rel="stylesheet" href="/assets/website/css/freesstap/templatemo-softy-pinko.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRKT8FD20L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRKT8FD20L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                                                    <span>VPN机场</span>
+                                                </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h2>Android 白天黑夜模式切换适配及引起的Activity销毁重启解决</h2>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p id="main-toc"><strong>目录</strong></p> <p id="-toc" style="margin-left:0px;"> <p id="%E4%B8%80%E3%80%81%E7%99%BD%E5%A4%9C%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%2CActivity%E9%94%80%E6%AF%81%E9%87%8D%E5%90%AF%E8%A7%A3%E5%86%B3%3A-toc" style="margin-left:0px;"><a href="#%E4%B8%80%E3%80%81%E7%99%BD%E5%A4%9C%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%2CActivity%E9%94%80%E6%AF%81%E9%87%8D%E5%90%AF%E8%A7%A3%E5%86%B3%3A" rel="nofollow">一、白夜模式切换,Activity销毁重启解决:</a></p> <p id="%E4%BA%8C%E3%80%81%20%E6%9A%97%E9%BB%91%E6%A8%A1%E5%BC%8F%E9%80%82%E9%85%8D-toc" style="margin-left:0px;"><a href="#%E4%BA%8C%E3%80%81%20%E6%9A%97%E9%BB%91%E6%A8%A1%E5%BC%8F%E9%80%82%E9%85%8D" rel="nofollow">二、 暗黑模式适配</a></p> <p id="%C2%A01.%20%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96%3A-toc" style="margin-left:80px;"><a href="#%C2%A01.%20%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96%3A" rel="nofollow">&nbsp;1. 添加依赖:</a></p> <p id="%C2%A0%202.%20%E5%A4%8D%E5%88%B6%E4%B8%8B%E9%9D%A2%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E5%8D%B3%E5%8F%AF%3A-toc" style="margin-left:80px;"><a href="#%C2%A0%202.%20%E5%A4%8D%E5%88%B6%E4%B8%8B%E9%9D%A2%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E5%8D%B3%E5%8F%AF%3A" rel="nofollow">&nbsp; 2. 复制下面工具类方法直接使用即可:</a></p> <p id="3.%E8%B5%84%E6%BA%90%E9%80%82%E9%85%8D%3A-toc" style="margin-left:80px;"><a href="#3.%E8%B5%84%E6%BA%90%E9%80%82%E9%85%8D%3A" rel="nofollow">3.资源适配:</a></p> <p id="%C2%A04.%20%E9%80%82%E9%85%8D%E5%9B%9E%E8%B0%83%3A-toc" style="margin-left:80px;"><a href="#%C2%A04.%20%E9%80%82%E9%85%8D%E5%9B%9E%E8%B0%83%3A" rel="nofollow">&nbsp;4. 适配回调:</a></p> <p id="5.%E5%88%87%E6%8D%A2%E7%99%BD%E5%A4%9C%E6%A8%A1%E5%BC%8F%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%3A-toc" style="margin-left:80px;"><a href="#5.%E5%88%87%E6%8D%A2%E7%99%BD%E5%A4%9C%E6%A8%A1%E5%BC%8F%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%3A" rel="nofollow">5.切换白夜模式注意事项:</a></p> <hr id="hr-toc"/> </h1> <p>&nbsp; &nbsp; &nbsp; &nbsp; 当白夜模式切换时，activity会销毁重新加载，谷歌是希望重新加载Activity可以刷新页面UI,但我的App并没有适配深色模式,这样用户体验就很不好,解决办法就是:</p> <p>在AndroidManifest.xml中给Activiyty添加或追加 <span style="color:#fe2c24;"><strong>android:configChanges="uiMode" </strong></span>属性即可:</p> <p><img fetchpriority="high" decoding="async" alt="" height="182" src="http://img.555519.xyz/uploads/20221223/92ef5ac0bc13029badcc982ee9e68b9b.jpg"></p> <p>&nbsp;<span style="color:#fe2c24;"><strong>configChanges 参数详解:</strong></span></p> <p>&nbsp;<img decoding="async" alt="" height="569" src="http://img.555519.xyz/uploads/20221223/f7f57f126b241e25dd0b5cad49ecfa18.jpg"></p> </h1> <h3 id="%C2%A01.%20%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96%3A">&nbsp;1. 添加依赖:</h3> <pre><code class="language-java">api 'com.android.support:appcompat-v7:24.1.1' 或者更高版本 或使用androidx的依赖都可以</code></pre> <h3 id="%C2%A0%202.%20%E5%A4%8D%E5%88%B6%E4%B8%8B%E9%9D%A2%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%B9%E6%B3%95%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E5%8D%B3%E5%8F%AF%3A">&nbsp; 2. 复制下面工具类方法直接使用即可:</h3> <pre><code class="language-java">/**  * 暗黑模式适配工具类  */ public class DarkModeUtils {      public static final String KEY_MODE = "white_night_mode_sp";      /**      * 在 Application 的 onCreate() 方法中调用      */     public static void init(Application application) {         int nightMode = getNightModel(application);         AppCompatDelegate.setDefaultNightMode(nightMode);     }      /**      * 应用夜间模式      */     public static void applyNightMode(Context context) {         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);         setNightModel(context, AppCompatDelegate.MODE_NIGHT_YES);     }      /**      * 应用日间模式      */     public static void applyDayMode(Context context) {         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);         setNightModel(context, AppCompatDelegate.MODE_NIGHT_NO);     }      /**      * 跟随系统主题时需要动态切换      */     public static void applySystemMode(Context context) {         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);         setNightModel(context, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);     }      /**      * 判断App当前是否处于暗黑模式状态      */     public static boolean isDarkMode(Context context) {         int nightMode = getNightModel(context);         if (nightMode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM) {             int applicationUiMode = context.getResources().getConfiguration().uiMode;             int systemMode = applicationUiMode &amp; Configuration.UI_MODE_NIGHT_MASK;             return systemMode == Configuration.UI_MODE_NIGHT_YES;         } else {             return nightMode == AppCompatDelegate.MODE_NIGHT_YES;         }     }      private static int getNightModel(Context context) {         SharedPreferences sp = context.getSharedPreferences(KEY_MODE, Context.MODE_PRIVATE);         return sp.getInt(KEY_MODE, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);     }      public static void setNightModel(Context context, int nightMode) {         SharedPreferences sp = context.getSharedPreferences(KEY_MODE, Context.MODE_PRIVATE);         sp.edit().putInt(KEY_MODE, nightMode).apply();     }  }</code></pre> <h3 id="3.%E8%B5%84%E6%BA%90%E9%80%82%E9%85%8D%3A">3.资源适配:</h3> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对图片和颜色创建暗黑模式的文件夹,切换暗黑模式时系统会自动使用该文件夹下的资源:</p> <p><img decoding="async" alt="" height="566" src="http://img.555519.xyz/uploads/20221223/144e48e9c00d39b0c282f58b277070c5.jpg"></p> <h3 id="%C2%A04.%20%E9%80%82%E9%85%8D%E5%9B%9E%E8%B0%83%3A">&nbsp;4. 适配回调:</h3> <p>如果添加或追加了&nbsp;<span style="color:#fe2c24;"><strong>android:configChanges="uiMode"</strong></span><span style="color:#494949;">属性,&nbsp;在模式切换后会回调Activity的</span>onConfigurationChanged(),建议在BaseActivity中重写该方法,并在里面做相应的适配.</p> <p>可以调用上面工具类中的&nbsp; DarkModeUtils.isDarkMode(this) 方法判断是否是暗黑模式.也可以调用工具类中的方法切换App的白夜模式,注意事项看下面:</p> <h3 id="5.%E5%88%87%E6%8D%A2%E7%99%BD%E5%A4%9C%E6%A8%A1%E5%BC%8F%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%3A">5.切换白夜模式注意事项:</h3> <p>(1) 在 Application 的 onCreate() 方法中调用&nbsp;DarkModeUtils.init(this) 初始化工具类;</p> <p>(2) 调用&nbsp;DarkModeUtils.applySystemMode(this) 方法自适应系统白夜模式切换;</p> <p>(3) 如果使用的 androidx的依赖直接调用即可.</p> <p>(4) 如果使用support依赖需要手动调用Activity的 recreate()方法重建页面或针对页面所有View做不同适配.</p> <p>直接调用recreate()方法重建页面示例:</p> <p><img loading="lazy" decoding="async" alt="" height="308" src="http://img.555519.xyz/uploads/20221223/766b75764d1f046baee8ef04b57d7c1a.jpg"></p> <p>&nbsp;针对页面每个View去设置白夜模式的示例:</p> <p><img loading="lazy" decoding="async" alt="" height="402" src="http://img.555519.xyz/uploads/20221223/30c946a60844f53d4a18878aa6febcb0.jpg"></p> <p>(5) 具体原因看下面源码:</p> <p>androidx版本：</p> <pre><code class="language-java">/**      * Sets the default night mode. This is the default value used for all components, but can      * be overridden locally via {@link #setLocalNightMode(int)}.      *      * &lt;p&gt;This is the primary method to control the DayNight functionality, since it allows      * the delegates to avoid unnecessary recreations when possible.&lt;/p&gt;      *      * &lt;p&gt;If this method is called after any host components with attached      * {@link AppCompatDelegate}s have been 'started', a {@code uiMode} configuration change      * will occur in each. This may result in those components being recreated, depending      * on their manifest configuration.&lt;/p&gt;      *      * &lt;p&gt;Defaults to {@link #MODE_NIGHT_FOLLOW_SYSTEM}.&lt;/p&gt;      *      * @see #setLocalNightMode(int)      * @see #getDefaultNightMode()      */     public static void setDefaultNightMode(@NightMode int mode) {         switch (mode) {             case MODE_NIGHT_NO:             case MODE_NIGHT_YES:             case MODE_NIGHT_FOLLOW_SYSTEM:             case MODE_NIGHT_AUTO_TIME:             case MODE_NIGHT_AUTO_BATTERY:                 if (sDefaultNightMode != mode) {                     sDefaultNightMode = mode;                     applyDayNightToActiveDelegates();                 }                 break;             default:                 Log.d(TAG, "setDefaultNightMode() called with an unknown mode");                 break;         }     }</code></pre> <p>support版本：</p> <pre><code class="language-java">public static void setDefaultNightMode(int mode) {         switch(mode) {         case -1:         case 0:         case 1:         case 2:             sDefaultNightMode = mode;             break;         default:             Log.d("AppCompatDelegate", "setDefaultNightMode() called with an unknown mode");         }     }</code></pre> <p>对比后可以发现androidx切换暗黑模式后，自己主动调用了applyDayNightToActiveDelegates()方法，使Activity重建。而support上没有，只是赋值。所以support版本上使用需要自己调用Activity的recreate()方法重建。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-91287.htm">宠物疫苗妙三多和辉瑞哪个好?（辉瑞妙三多一共打几针）</a></p>
+                                        <p>下一个：<a href="/news/article-92026.htm">动物医院儿童画 动物医院怎么画</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-free-node-subscribe-links.htm" title="VPN机场 | 3月23日18.8M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址">VPN机场 | 3月23日18.8M/S|免费VPN/SSR/Shadowrocket/V2ray/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-node-share-links.htm" title="VPN机场 | 3月28日18.7M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址">VPN机场 | 3月28日18.7M/S|免费VPN/Shadowrocket/V2ray/Clash/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-3-free-node-subscribe-links.htm" title="VPN机场 | 4月3日22.3M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址">VPN机场 | 4月3日22.3M/S|免费VPN/SSR/Clash/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-clash-v2ray-ss-ssr.htm" title="VPN机场 | 3月2日20.6M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址">VPN机场 | 3月2日20.6M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-71043.htm" title="Spring Cloud入门-Config分布式配置中心(Hoxton版本)">Spring Cloud入门-Config分布式配置中心(Hoxton版本)</a></li>
+                        <li class="py-2"><a href="/news/article-75056.htm" title="无货源网店操作流程（无货源网店怎么操作）">无货源网店操作流程（无货源网店怎么操作）</a></li>
+                        <li class="py-2"><a href="/news/article-72370.htm" title="鱼饲料厂家直销（鱼饲料批发市场）">鱼饲料厂家直销（鱼饲料批发市场）</a></li>
+                        <li class="py-2"><a href="/news/article-92025.htm" title="Android 白天黑夜模式切换适配及引起的Activity销毁重启解决">Android 白天黑夜模式切换适配及引起的Activity销毁重启解决</a></li>
+                        <li class="py-2"><a href="/news/article-86894.htm" title="动物注射疫苗注射哪里最好 动物注射疫苗注射哪里最好呢">动物注射疫苗注射哪里最好 动物注射疫苗注射哪里最好呢</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-node-share-links.htm" title="VPN机场 | 3月21日19.1M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址">VPN机场 | 3月21日19.1M/S|免费VPN/Shadowrocket/V2ray/SSR/Clash免费节点链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+        <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <a href="/">VPN机场 订阅链接中文网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/freesstap/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/website/js/frontend/freesstap/popper.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="/assets/website/js/frontend/freesstap/scrollreveal.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/jquery.counterup.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="/assets/website/js/frontend/freesstap/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
