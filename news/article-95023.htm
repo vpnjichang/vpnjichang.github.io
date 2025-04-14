@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-95023.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>脚本如何加入html文件中,html中加载JavaScript脚本文件的常用方式总结</title>
+        <meta name="description" content="当浏览器遇到(内嵌)标签时，当前浏览器无从获知javaScript是否会修改页面内容。因此，这时浏览器会停止处理页面，先执行javaScript代码，然后再继续解析和渲染页面。同样的情况也发生在使用 " />
+        <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN机场 订阅链接中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-95023.htm" />
+    <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
+    <meta property="og:title" content="脚本如何加入html文件中,html中加载JavaScript脚本文件的常用方式总结" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/449cd17909cd51dd09edaa976556f630.webp" />
+        <meta property="og:release_date" content="2025-04-13T07:19:18" />
+    <meta property="og:updated_time" content="2025-04-13T07:19:18" />
+        <meta property="og:description" content="当浏览器遇到(内嵌)标签时，当前浏览器无从获知javaScript是否会修改页面内容。因此，这时浏览器会停止处理页面，先执行javaScript代码，然后再继续解析和渲染页面。同样的情况也发生在使用 " />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="脚本如何加入html文件中,html中加载JavaScript脚本文件的常用方式总结">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/font-awesome.css">
+    <link rel="stylesheet" href="/assets/website/css/freesstap/templatemo-softy-pinko.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRKT8FD20L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRKT8FD20L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                                                    <span>VPN机场</span>
+                                                </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h2>脚本如何加入html文件中,html中加载JavaScript脚本文件的常用方式总结</h2>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div style="font-size:16px;"> <p>当浏览器遇到(内嵌)标签时，当前浏览器无从获知javaScript是否会修改页面内容。因此，这时浏览器会停止处理页面，先执行javaScript代码，然后再继续解析和渲染页面。同样的情况也发生在使用 src 属性加在javaScript的过程中(即外链 javaScript)，浏览器必须先花时间下载外链文件中的代码，然后解析并执行它。在这个过程中，页面渲染和用户交互完全被阻塞了。</p> <p>也就是说：每当浏览器解析到标签(无论内嵌还是外链)时，浏览器会(一根筋地)优先下载、解析并执行该标签中的javaScript代码，而阻塞了其后所有页面内容的下载和渲染。</p> <p>方式一：惯例的做法</p> <p>最传统的方式是在head标签内插入标签。</p> <p>然而这种常规的做法却隐藏着严重的性能问题。根据上述对标签特性的描述，我们知道，在该示例中，当浏览器解析到标签时，浏览器会停止解析其后的内容，而优先下载脚本文件，并执行其中的代码，这意味着，其后的test.css样式文件和</p> <p>标签都无法被加载，由于标签无法被加载，那么页面自然就无法渲染了。因此在该javaScript代码完全执行完之前，页面都是一片空白。</p> <p>方式二：经典的做法</p> <p>既然标签会阻塞其后内容的加载，那么将标签放到所有页面内容之后不就可以避免这种糟糕的状况了吗？ 将所有的标签尽可能地放到</p> <p>标签底部，以尽量避免对页面其余部分下载的影响。</p> <p>在IE8+浏览器上已经实现了脚本并行下载，但在某些浏览器中(即使脚本文件放到了</p> <p>标签底部)，页面中脚本仍是一个接着一个加载的。所以我们需要下一个方法，即：动态加载脚本。</p> <p>方式三：动态脚本</p> <p>通过文档对象模型(DOM)，我们可以几乎可以页面任意地方创建。</p> <p>上述代码动态创建了一个外链file1的标签，并将其添加到</p> <p>标签内。这种技术的重点在于：</p> <p>无论在何时启动下载，文件的下载和执行过程不会阻塞页面其他进程(包括脚本加载)。</p> <p>然而这种方法也是有缺陷的。这种方法加载的脚本会在下载完成后立即执行，那么意味着多个脚本之间的运行顺序是无法保证的(除了Firefox和Opera)。当某个脚本对另一个脚本有依赖关系时，就很可能发生错误了。比如，写一个jQuery代码，需要引入jQuery库，然而你写的jQuery代码文件很可能会先完成下载并立即执行，这时浏览器会报错——‘jQuery未定义'之类的，因为此时jQuery库还未下载完成。于是做出以下改进：</p> <p>上述代码改进的地方就是增加了一个回调函数，该函数会在相应脚本文件加载完成后被调用。这样便可以实现顺序加载了，写法如下(假设file2依赖file1，file1和file3相互独立)：loadScript(‘file1.js',function(){ loadScript(‘file2.js',function(){}); }); loadScript(‘file3.js',function(){});</p> <p>file2会在file1加载完后才开始加载，保证了在file2执行前file1已经准备妥当。而file1和file3是并行下载的，互不影响。 虽然loadScript函数已经足够好，但还是有些不尽人意的地方——通过分析这段代码，我们知道，loadScript函数中的顺序加载是以脚本的阻塞加载来实现的(正如上述红字部分指出的那样)。而我们真正想实现的是——脚本同步下载并按相应顺序执行，即并行加载并顺序执行。</p> </div> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-94375.htm">宠物狗领养平台推荐 宠物狗领养平台推荐哪个</a></p>
+                                        <p>下一个：<a href="/news/article-95027.htm">宠物寄养协议模板（宠物寄养协议样本简单）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-77080.htm" title="在定义C++, C通用接口函数时让C++接口支持默认参数">在定义C++, C通用接口函数时让C++接口支持默认参数</a></li>
+                        <li class="py-2"><a href="/news/article-95027.htm" title="宠物寄养协议模板（宠物寄养协议样本简单）">宠物寄养协议模板（宠物寄养协议样本简单）</a></li>
+                        <li class="py-2"><a href="/news/article-71712.htm" title="关于动物医院的纪录片（动物医生纪录片）">关于动物医院的纪录片（动物医生纪录片）</a></li>
+                        <li class="py-2"><a href="/news/article-75056.htm" title="无货源网店操作流程（无货源网店怎么操作）">无货源网店操作流程（无货源网店怎么操作）</a></li>
+                        <li class="py-2"><a href="/news/article-80503.htm" title="孩子10几天后才说被猫咬了,打个狂犬疫苗能喝点小酒吗（打了狂犬疫苗六个月后又被猫抓伤了能茶喝吗?）">孩子10几天后才说被猫咬了,打个狂犬疫苗能喝点小酒吗（打了狂犬疫苗六个月后又被猫抓伤了能茶喝吗?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-10-free-v2ray.htm" title="VPN机场 | 4月10日21.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址">VPN机场 | 4月10日21.6M/S|免费VPN/V2ray/SSR/Shadowrocket/Clash免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-94374.htm" title="领养宠物狗是什么意思啊英语怎么写（领养宠物狗是什么意思啊英语怎么写单词）">领养宠物狗是什么意思啊英语怎么写（领养宠物狗是什么意思啊英语怎么写单词）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-free-high-speed-nodes.htm" title="VPN机场 | 3月10日19.3M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址">VPN机场 | 3月10日19.3M/S|免费VPN/SSR/V2ray/Clash/Shadowrocket免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-node-subscribe.htm" title="VPN机场 | 3月31日21.5M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址">VPN机场 | 3月31日21.5M/S|免费VPN/Clash/SSR/Shadowrocket/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-67789.htm" title="SpringCloud系列之分布式请求链路跟踪(Sleuth)">SpringCloud系列之分布式请求链路跟踪(Sleuth)</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+        <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <a href="/">VPN机场 订阅链接中文网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/freesstap/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/website/js/frontend/freesstap/popper.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="/assets/website/js/frontend/freesstap/scrollreveal.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/jquery.counterup.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="/assets/website/js/frontend/freesstap/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
