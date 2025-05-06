@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnjichang.github.io/news/article-109809.htm" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>《易学C++》第15章 再识对象</title>
+        <meta name="description" content="上一章从使用的角度介绍了什么是类和对象，如何使用成员函数。本章将从设计的角度来研究类和对象，探究类的内部。 本章的知识点有：  类的声明与定义方法 访问控制符——公有及私有 成员函数的声明、定义与重载" />
+        <link rel="icon" href="/assets/website/img/freesstap/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN机场 订阅链接中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnjichang.github.io/news/article-109809.htm" />
+    <meta property="og:site_name" content="VPN机场 订阅链接中文网" />
+    <meta property="og:title" content="《易学C++》第15章 再识对象" />
+    <meta property="og:image" content="https://vpnjichang.github.io/uploads/20241110/e193484641c220623268f75d568a3605.webp" />
+        <meta property="og:release_date" content="2025-05-02T09:23:39" />
+    <meta property="og:updated_time" content="2025-05-02T09:23:39" />
+        <meta property="og:description" content="上一章从使用的角度介绍了什么是类和对象，如何使用成员函数。本章将从设计的角度来研究类和对象，探究类的内部。 本章的知识点有：  类的声明与定义方法 访问控制符——公有及私有 成员函数的声明、定义与重载" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="《易学C++》第15章 再识对象">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/website/css/freesstap/font-awesome.css">
+    <link rel="stylesheet" href="/assets/website/css/freesstap/templatemo-softy-pinko.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YRKT8FD20L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YRKT8FD20L');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                                                    <span>VPN机场</span>
+                                                </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                                                        <li><a href="/">首页</a></li>
+                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                        <li><a href="/client.htm">客户端</a></li>
+                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                    </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h2>《易学C++》第15章 再识对象</h2>
+                        <p>
+                            <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / 正文
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Meta免费节点订阅站" data-url="https://clash-meta.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> </h1> <p>上一章从使用的角度介绍了什么是类和对象，如何使用成员函数。本章将从设计的角度来研究类和对象，探究类的内部。</p> <p>本章的知识点有：</p> <ul> <li>类的声明与定义方法</li> <li>访问控制符——公有及私有</li> <li>成员函数的声明、定义与重载</li> <li>常成员函数的概念</li> <li>快速查看类的方法</li> <li>对象的引用和对象指针</li> </ul> <h2 id="nav_point_247">15.1　类是一种数据类型</h2> <p>大家都知道了数据类型和变量的关系。数据类型是各个变量的归类，而变量则是某个数据类型的具体表现。如int是所有整数的归类，而存有整数221的整型变量a是整型数据的具体表现。那么，变量就可以被认为是数据类型的一个实例（Instance）。各个变量都有它们的属性：内容和占用内存空间等；各个变量都有它们的操作：算术运算或关系运算等。从这个角度来看，类和对象的关系就如同数据类型和变量的关系。所以，不妨将类看作一种自定义的数据类型，那么对象就是一种属于该类型的变量。</p> <h3 id="nav_point_248">15.1.1　类与结构</h3> <p>在第9章学习了结构类型，知道它是一种由用户自己定义的数据类型。虽然能够使用结构刻画现实生活中的东西，却无法让它“动起来”。所有对它的操作都要依赖于为它编写的函数。</p> <p>类与结构是相似的。它也是一种由用户自己定义的数据类型，可以用来刻画现实生活中的东西。不同的是，对它的操作并不是通过普通的函数，而是通过类的成员函数来实现的。</p> <p>下面来看如何定义一个类和它的成员数据。</p> <pre class="代码无行号"><code>class 类名 { 　　数据类型 成员数据1； 　　数据类型 成员数据2； 　　…… }； </code></pre> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-108979.htm">动物疫苗的使用注意事项有哪些方面（动物疫苗注射工作注意事项）</a></p>
+                                        <p>下一个：<a href="/news/article-109812.htm">深圳宠物领养中心官网电话 深圳宠物领养中心官网电话号码</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-107367.htm" title="动物疫苗价格表最新图片及价格（动物疫苗法最新消息2019）">动物疫苗价格表最新图片及价格（动物疫苗法最新消息2019）</a></li>
+                        <li class="py-2"><a href="/news/article-89074.htm" title="Intellij IDEA下载安装配置GIT详细教程 [超详细]">Intellij IDEA下载安装配置GIT详细教程 [超详细]</a></li>
+                        <li class="py-2"><a href="/news/article-100858.htm" title="宠物领养协议书范本模板图片大全下载（宠物领养协议书怎么写有效）">宠物领养协议书范本模板图片大全下载（宠物领养协议书怎么写有效）</a></li>
+                        <li class="py-2"><a href="/news/article-95767.htm" title="宠颐生动物医院贵吗 宠颐生动物医院好么">宠颐生动物医院贵吗 宠颐生动物医院好么</a></li>
+                        <li class="py-2"><a href="/news/article-111524.htm" title="狐狸犬贵不贵（狐狸犬值钱吗）">狐狸犬贵不贵（狐狸犬值钱吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-27-free-subscribe-node.htm" title="VPN机场 | 4月27日19M/S|免费VPN/Clash/V2ray/Shadowrocket/SSR免费节点链接地址">VPN机场 | 4月27日19M/S|免费VPN/Clash/V2ray/Shadowrocket/SSR免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-5-1-clash-v2ray-ss-ssr.htm" title="VPN机场 | 5月1日18.7M/S|免费VPN/Shadowrocket/SSR/Clash/V2ray免费节点链接地址">VPN机场 | 5月1日18.7M/S|免费VPN/Shadowrocket/SSR/Clash/V2ray免费节点链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-88347.htm" title="广州宠物领养平台官网地址电话查询（广州宠物领养微信群）">广州宠物领养平台官网地址电话查询（广州宠物领养微信群）</a></li>
+                        <li class="py-2"><a href="/news/article-88346.htm" title="宠物回收站电话（宠物回收中心）">宠物回收站电话（宠物回收中心）</a></li>
+                        <li class="py-2"><a href="/news/article-87613.htm" title="青岛动物疾病预防控制中心（青岛市动物疾病防控中心）">青岛动物疾病预防控制中心（青岛市动物疾病防控中心）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+        <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <a href="/">VPN机场 订阅链接中文网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="/assets/website/js/frontend/freesstap/jquery-2.1.0.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/assets/website/js/frontend/freesstap/popper.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/bootstrap.min.js"></script>
+    <!-- Plugins -->
+    <script src="/assets/website/js/frontend/freesstap/scrollreveal.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/waypoints.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/jquery.counterup.min.js"></script>
+    <script src="/assets/website/js/frontend/freesstap/imgfix.min.js"></script>
+    <!-- Global Init -->
+    <script src="/assets/website/js/frontend/freesstap/custom.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
