@@ -330,9 +330,9 @@ HTTP注射器的魅力，正是在于它对HTTP协议机制的巧妙利用。它
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 的传输效率比 Trojan 高吗？</h5></div>
+    <div class="panel-heading"><h5>Trojan 的证书配置需要注意哪些事项？</h5></div>
     <div class="panel-body">
-        在高延迟环境下，VLESS + XTLS 的性能通常比 Trojan 高。XTLS 去掉了冗余加密开销，降低 CPU 占用，提高多连接场景下的吞吐率，尤其在服务器高负载情况下表现更佳。<hr />    </div>
+        TLS 证书必须有效且域名匹配，否则客户端无法建立连接。推荐使用受信任证书，并确保证书链完整，以保证节点安全和长期可用性，同时提升伪装效果。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 用户带宽限制如何配置？</h5></div>
@@ -340,19 +340,9 @@ HTTP注射器的魅力，正是在于它对HTTP协议机制的巧妙利用。它
         管理员可设置每个用户上传、下载和总流量上限，超出限制可自动降速或阻止访问。保证服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 如何配置透明代理？</h5></div>
+    <div class="panel-heading"><h5>VLESS + XTLS 的传输效率比 Trojan 高吗？</h5></div>
     <div class="panel-body">
-        Mellow 通过 tun2socks 技术实现透明代理。只需在配置文件中启用该功能，系统所有网络流量都会自动转发到代理内核，用户无需手动设置系统代理参数。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下的优势是什么？</h5></div>
-    <div class="panel-body">
-        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定的移动网络。结合策略组和多出口节点使用，可提高访问速度和连接稳定性，保证用户体验流畅可靠。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的证书配置需要注意哪些事项？</h5></div>
-    <div class="panel-body">
-        TLS 证书必须有效且域名匹配，否则客户端无法建立连接。推荐使用受信任证书，并确保证书链完整，以保证节点安全和长期可用性，同时提升伪装效果。<hr />    </div>
+        在高延迟环境下，VLESS + XTLS 的性能通常比 Trojan 高。XTLS 去掉了冗余加密开销，降低 CPU 占用，提高多连接场景下的吞吐率，尤其在服务器高负载情况下表现更佳。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 支持手动和二维码导入节点吗？</h5></div>
@@ -365,9 +355,14 @@ HTTP注射器的魅力，正是在于它对HTTP协议机制的巧妙利用。它
         VLESS Reality 通过伪造握手和真实网站的 TLS 指纹实现高仿真加密，而 XTLS 强调高性能传输。Reality 更注重隐蔽性，适合高安全需求环境；XTLS 则偏重传输效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 与 Shadowrocket 相比的最大区别是什么？</h5></div>
+    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下的优势是什么？</h5></div>
     <div class="panel-body">
-        QuantumultX 在规则系统和自动化脚本上更灵活，支持丰富的 rewrite 与 filter 功能，而 Shadowrocket 则更轻便易用，适合普通用户快速切换节点。二者可根据使用习惯与功能需求选择。<hr />    </div>
+        XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定的移动网络。结合策略组和多出口节点使用，可提高访问速度和连接稳定性，保证用户体验流畅可靠。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 的 Routing 设置可以实现什么？</h5></div>
+    <div class="panel-body">
+        V2Ray 的 Routing 系统支持基于域名、IP、端口或协议的智能分流。用户可以指定特定网站直连、部分服务走代理，还能创建黑白名单，实现灵活的网络访问控制。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何在 Android 手机上使用 Clash for Android？</h5></div>
@@ -375,9 +370,14 @@ HTTP注射器的魅力，正是在于它对HTTP协议机制的巧妙利用。它
         Clash for Android 是专为移动设备开发的客户端，安装后导入订阅链接即可使用。用户可设置代理模式（全局、规则、自定义）并查看实时流量信息。它的电量消耗较低，适合长期后台运行。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 Routing 设置可以实现什么？</h5></div>
+    <div class="panel-heading"><h5>Mellow 如何配置透明代理？</h5></div>
     <div class="panel-body">
-        V2Ray 的 Routing 系统支持基于域名、IP、端口或协议的智能分流。用户可以指定特定网站直连、部分服务走代理，还能创建黑白名单，实现灵活的网络访问控制。    </div>
+        Mellow 通过 tun2socks 技术实现透明代理。只需在配置文件中启用该功能，系统所有网络流量都会自动转发到代理内核，用户无需手动设置系统代理参数。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 与 Shadowrocket 相比的最大区别是什么？</h5></div>
+    <div class="panel-body">
+        QuantumultX 在规则系统和自动化脚本上更灵活，支持丰富的 rewrite 与 filter 功能，而 Shadowrocket 则更轻便易用，适合普通用户快速切换节点。二者可根据使用习惯与功能需求选择。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -425,16 +425,16 @@ HTTP注射器的魅力，正是在于它对HTTP协议机制的巧妙利用。它
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-7-29.htm" title="VPN机场 | 7月29日19.8M/S|免费VPN/V2ray节点/Clash节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点免费节点链接地址">VPN机场 | 7月29日19.8M/S|免费VPN/V2ray节点/Clash节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-8-7.htm" title="VPN机场 | 8月7日20.5M/S|免费VPN/Singbox节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN机场 | 8月7日20.5M/S|免费VPN/Singbox节点/SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-8-1.htm" title="VPN机场 | 8月1日22.3M/S|免费VPN/V2ray节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN机场 | 8月1日22.3M/S|免费VPN/V2ray节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-27-free-vpn.htm" title="VPN机场 | 7月27日18M/S|免费VPN/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点免费节点链接地址">VPN机场 | 7月27日18M/S|免费VPN/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-4-node-share.htm" title="VPN机场 | 8月4日18.8M/S|免费VPN/Trojan节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点免费节点链接地址">VPN机场 | 8月4日18.8M/S|免费VPN/Trojan节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-17-mianfei-vpn.htm" title="VPN机场 | 7月17日20.1M/S|免费VPN/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点免费节点链接地址">VPN机场 | 7月17日20.1M/S|免费VPN/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-20-node-share.htm" title="VPN机场 | 8月20日21.1M/S|免费VPN/Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN机场 | 8月20日21.1M/S|免费VPN/Singbox节点/Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-vpn-node.htm" title="VPN机场 | 9月4日19M/S|免费VPN/SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点链接地址">VPN机场 | 9月4日19M/S|免费VPN/SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-9.htm" title="VPN机场 | 8月9日22.4M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点免费节点链接地址">VPN机场 | 8月9日22.4M/S|免费VPN/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-28-node-share.htm" title="VPN机场 | 8月28日19.5M/S|免费VPN/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点免费节点链接地址">VPN机场 | 8月28日19.5M/S|免费VPN/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-21.htm" title="VPN机场 | 8月21日21.2M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点链接地址">VPN机场 | 8月21日21.2M/S|免费VPN/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-18-vpn-proxy.htm" title="VPN机场 | 8月18日23M/S|免费VPN/Trojan节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点免费节点链接地址">VPN机场 | 8月18日23M/S|免费VPN/Trojan节点/Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-26-node-share.htm" title="VPN机场 | 8月26日22.7M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点免费节点链接地址">VPN机场 | 8月26日22.7M/S|免费VPN/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点免费节点链接地址</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-14-free-node-subscribe.htm" title="VPN机场 | 8月14日20M/S|免费VPN/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点免费节点链接地址">VPN机场 | 8月14日20M/S|免费VPN/Singbox节点/Shadowrocket节点/Trojan节点/Clash节点/V2ray节点/SSR节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-16-free-vpn-node.htm" title="VPN机场 | 7月16日22.4M/S|免费VPN/Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点免费节点链接地址">VPN机场 | 7月16日22.4M/S|免费VPN/Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-12-vpn-proxy.htm" title="VPN机场 | 8月12日20.3M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点免费节点链接地址">VPN机场 | 8月12日20.3M/S|免费VPN/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点免费节点链接地址</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-19-node-share-links.htm" title="VPN机场 | 7月19日21.8M/S|免费VPN/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点免费节点链接地址">VPN机场 | 7月19日21.8M/S|免费VPN/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-8-15.htm" title="VPN机场 | 8月15日20.7M/S|免费VPN/SSR节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN机场 | 8月15日20.7M/S|免费VPN/SSR节点/Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-8-11.htm" title="VPN机场 | 8月11日20.8M/S|免费VPN/Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点免费节点链接地址">VPN机场 | 8月11日20.8M/S|免费VPN/Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点免费节点链接地址</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -446,10 +446,10 @@ HTTP注射器的魅力，正是在于它对HTTP协议机制的巧妙利用。它
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
